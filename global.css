@@ -1,0 +1,31 @@
+:root {
+    --border-sm: 1px;
+    --border-md: 2px;
+    --border-lg: 3px;
+
+    --body-margin-vertical: 5vh;
+    --body-margin-horizontal: 10vmax;
+
+    --body-default-margin: var(--body-margin-vertical) var(--body-margin-horizontal) var(--body-margin-vertical) var(--body-margin-horizontal);
+
+    --border-radius-default: 4px;
+
+    --border-color-default: hsl(0%, 0%, 50%);
+
+    --shadow-default: 0px 10px 20px hsl(0, 0%, 30%);
+}
+
+body {
+    margin: var(--body-default-margin);
+}
+
+.container {
+    display: grid;
+    /* grid-template-columns: ; */
+}
+
+.product-box {
+    border-radius: var(--border-radius-default);
+    border-width: var(--border-sm);
+    box-shadow: var(--shadow-default);
+}
