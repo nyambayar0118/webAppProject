@@ -17,6 +17,7 @@
 
 body {
     margin: var(--body-default-margin);
+    background-color: grey;
 }
 
 .container {
