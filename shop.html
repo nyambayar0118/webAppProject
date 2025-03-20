@@ -1,53 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="eng">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
+    <link rel="stylesheet" href="global.css">
 </head>
-<header>
-    <div>
-        <a href="index.html">
-            <image alt="logo"></image>
-        </a>
-    </div>
-
-    <button>search</button>
-    <input type="text">
-    <label for="category">Ангилал</label>
-    <select id="category">
-        <option>Хувцас</option>
-        <option>Цахилгаан бараа</option>
-        <option>Гэр ахуйн бараа</option>
-        <select>
-            <a href="./login.html">
-                <button>
-                    Log in
-                </button>
-            </a>
-            <a href="./signup.html">
-                <button>
-                    Sign up
-                </button>
-            </a>
-</header>
-
 <body>
 
+    <header>
+        <a href="index.html"><img src="https://picsum.photos/50/50" alt="Logo" class="logo"></a>
+        <nav>
+            <input type="search" placeholder="Хайх...">
+            <button>🔍</button>
+            <a href="login.html"><button>Log In</button></a>
+            <a href="signup.html"><button>Sign Up</button></a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="shop-info">
+            <figure>
+                <img src="https://picsum.photos/100/100" alt="Дэлгүүрийн зураг">
+            </figure>
+            <article>
+                <h1>Дэлгүүрийн нэр</h1>
+                <p class="rating">⭐⭐⭐⭐☆ (4.5)</p>
+                <p>Дэлгүүрийн тухай тайлбар энд байна...</p>
+            </article>
+        </section>
+
+        <section class="featured-products">
+            <h2>Онцлох бараанууд</h2>
+            <ul>
+                <li>
+                    <figure>
+                        <img src="https://picsum.photos/200/100" alt="Бараа 1">
+                        <figcaption>Бараа 1 - 50,000₮</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="https://picsum.photos/200/100" alt="Бараа 2">
+                        <figcaption>Бараа 2 - 30,000₮</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="https://picsum.photos/200/100" alt="Бараа 3">
+                        <figcaption>Бараа 3 - 20,000₮</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
+
+        <aside>
+            <h2>Барааны эрэмбэ</h2>
+            <label for="sort">Эрэмбэ:</label>
+            <select id="sort">
+                <option>Үнэ өсөх</option>
+                <option>Үнэ буурах</option>
+                <option>Шинэ бараа</option>
+                <option>Олон худалдан авсан</option>
+            </select>
+        </aside>
+
+        <section class="reviews">
+            <h2>Сэтгэгдлүүд</h2>
+            <article>
+                <p><strong>Баярцэцэг:</strong> Маш сайн дэлгүүр байна!</p>
+            </article>
+            <article>
+                <p><strong>Энхболд:</strong> Үйлчилгээ сайн байсан.</p>
+            </article>
+        </section>
+
+        <section class="leave-review">
+            <h2>Сэтгэгдэл үлдээх</h2>
+            <form>
+                <textarea placeholder="Сэтгэгдлээ бичнэ үү..."></textarea>
+                <button type="submit">Илгээх</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Дэлгүүрийн Веб</p>
+    </footer>
+
 </body>
-
-<footer>
-    <nav>
-        <ul>
-            <li>Холбоо барих</li>
-            <li>Гомдол гаргах</li>
-            <li>Борлуулагчаар бүртгүүлэх</li>
-            <li>Санал хүсэлт</li>
-            <li></li>
-            <li></li>
-        </ul>
-    </nav>
-</footer>
-
 </html>
