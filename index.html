@@ -3,24 +3,28 @@
 
 <style>
     :root {
-    --border-sm: 1px;
-    --border-md: 2px;
-    --border-lg: 3px;
+        --border-sm: 1px;
+        --border-md: 2px;
+        --border-lg: 3px;
 
-    --body-margin-vertical: 5vh;
-    --body-margin-horizontal: 10vmax;
+        --body-margin-vertical: 5vh;
+        --body-margin-horizontal: 10vmax;
 
-    --body-default-margin: var(--body-margin-vertical) var(--body-margin-horizontal) var(--body-margin-vertical) var(--body-margin-horizontal);
+        --body-default-margin: var(--body-margin-vertical) var(--body-margin-horizontal) var(--body-margin-vertical) var(--body-margin-horizontal);
 
-    --border-radius-default: 12px;
+        --border-radius-default: 12px;
 
-    --border-color-default: hsl(0%, 0%, 50%);
+        --border-color-default: hsl(0%, 0%, 50%);
 
-    --shadow-default: 0px 10px 20px hsl(0, 0%, 80%);
-}
+        --shadow-default: 0px 10px 20px hsl(0, 0%, 80%);
+    }
 
     body {
-        margin: var(--body-default-margin);
+        margin: 0;
+    }
+
+    main {
+        /* margin: var(--body-default-margin); */
         background-color: grey;
         display: grid;
         grid-template-columns: auto;
@@ -32,10 +36,47 @@
             "nav";
     }
 
-    body>header {
+    header {
+        padding-left: 1vw;
+        padding-right: 1vw;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+
         display: flex;
-        flex-grow: 1;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: hsl(266, 100%, 72%);
     }
+
+
+    .search-bar-wrapper input {
+        padding: 0.75em 1em;
+        padding-left: 2em;
+        width: 300px;
+        border: 2px solid hsl(0, 0%, 37%);
+        border-radius: 8px 0px 0px 8px;
+        background-color: hsl(0, 0%, 100%);
+        
+        &::placeholder {
+            font-weight: bold;
+            letter-spacing: 0.1em;
+        }
+    }
+    
+    .search-bar-wrapper button {
+        padding: 0.7em;
+        cursor: pointer;
+        border-radius: 0px 8px 8px 0px;
+        border: 2px solid hsl(0, 0%, 37%);
+        transform: translateX(-1em);
+        font-size: 13px;
+    }
+
+
+
+
+
 
     .products>div {
         display: flex;
@@ -53,13 +94,20 @@
         height: auto;
         /* padding: 0.5rem; */
     }
+
+
+
+    .logo {
+        max-width: 10em;
+    }
 </style>
 
 <head>
     <!-- <link rel="stylesheet" type="text/css" href="./global.css"> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Big Bang MN</title>
+    <link rel="icon" href="./pictures/site elements/explosion.ico" type="image/x-icon">
 </head>
 
 
@@ -67,104 +115,116 @@
     <header>
         <div>
             <a href="index.html">
-                <img src="https://picsum.photos/50/50" alt="logo">
+                <img class="logo" src="./pictures/site elements/logo2.png" alt="logo">
             </a>
         </div>
 
-        <button>search</button>
-        <input type="text">
-        <label for="category">Ангилл</label>
-        <select id="category">
-            <option>Хувцас</option>
-            <option>Tsahilgaan бараа</option>
-            <option>Гэр ахуйн бараа</option>
-            <select>
-                <a href="./login.html">
-                    <button>
-                        Log in
-                    </button>
-                </a>
-                <a href="./signup.html">
-                    <button>
-                        Sign up
-                    </button>
-                </a>
+        <div class="search-bar-wrapper">
+            <input type="text" placeholder="Бүтээгдэхүүн хайх">
+            <button>🔍</button>
+        </div>
+
+        <div>
+            <label for="category">Ангилал</label>
+            <select id="category">
+                <option>Хувцас</option>
+                <option>Цахилгаан бараа</option>
+                <option>Гэр ахуйн бараа</option>
+            </select>
+        </div>
+
+        <div>
+            <a href="./login.html">
+                <button>
+                    Log in
+                </button>
+            </a>
+            <a href="./signup.html">
+                <button>
+                    Sign up
+                </button>
+            </a>
+        </div>
+
     </header>
 
-    <section class="products">
-        <h1>Top rated</h1>
-        <div>
+    <main>
+        <section class="products">
+            <h1>Top rated</h1>
+            <div>
+                <article>
+                    <image alt="top rated product 1"></image>
+                    <p>Бараа 1</p> <button>save</button>
+                </article>
+                <article>
+                    <image alt="top rated product 2"></image>
+                    <p>Бараа 2</p>
+                    <button>save</button>
+                </article>
+                <article>
+                    <image alt="top rated product 3"></image>
+                    <p>Бараа 3</p> <button>save</button>
+                </article>
+            </div>
+
+        </section>
+
+
+        <section class="products">
+            <h2>New arrivals</h2>
+            <div>
+                <article class="product-box">
+                    <image alt="new arrival product 1"></image>
+                    <p>Бараа 1</p> <button>save</button>
+                </article>
+                <article class="product-box">
+                    <image alt="new arrival product 2"></image>
+                    <p>Бараа 2</p> <button>save</button>
+                </article>
+                <article class="product-box">
+                    <image alt="new arrival product 3"></image>
+                    <p>Бараа 3</p> <button>save</button>
+                </article>
+                <article class="product-box">
+                    <image alt="new arrival product 4"></image>
+                    <p>Бараа 4</p> <button>save</button>
+                </article>
+                <article class="product-box">
+                    <image alt="new arrival product 5"></image>
+                    <p>Бараа 5</p> <button>save</button>
+                </article>
+                <article class="product-box">
+                    <image alt="new arrival product 6"></image>
+                    <p>Бараа 6</p> <button>save</button>
+                </article>
+            </div>
+
+
+        </section>
+        <nav>
+            <h2>Ангилал</h2>
             <article>
-                <image alt="top rated product 1"></image>
-                <p>Бараа 1</p> <button>save</button>
+                <image alt="category 1"></image>
+                <p>Ангилал 1</p>
             </article>
             <article>
-                <image alt="top rated product 2"></image>
-                <p>Бараа 2</p>
-                <button>save</button>
+                <image alt="category 2"></image>
+                <p>Ангилал 2</p>
             </article>
             <article>
-                <image alt="top rated product 3"></image>
-                <p>Бараа 3</p> <button>save</button>
+                <image alt="category 3"></image>
+                <p>Ангилал 3</p>
             </article>
-        </div>
+            <article>
+                <image alt="category 4"></image>
+                <p>Ангилал 4</p>
+            </article>
+        </nav>
+        <section>
 
-    </section>
+        </section>
+    </main>
 
-
-    <section class="products">
-        <h2>New arrivals</h2>
-        <div>
-            <article class="product-box">
-                <image alt="new arrival product 1"></image>
-                <p>Бараа 1</p> <button>save</button>
-            </article>
-            <article class="product-box">
-                <image alt="new arrival product 2"></image>
-                <p>Бараа 2</p> <button>save</button>
-            </article>
-            <article class="product-box">
-                <image alt="new arrival product 3"></image>
-                <p>Бараа 3</p> <button>save</button>
-            </article>
-            <article class="product-box">
-                <image alt="new arrival product 4"></image>
-                <p>Бараа 4</p> <button>save</button>
-            </article>
-            <article class="product-box">
-                <image alt="new arrival product 5"></image>
-                <p>Бараа 5</p> <button>save</button>
-            </article>
-            <article class="product-box">
-                <image alt="new arrival product 6"></image>
-                <p>Бараа 6</p> <button>save</button>
-            </article>
-        </div>
-
-
-    </section>
-    <nav>
-        <h2>Ангилал</h2>
-        <article>
-            <image alt="category 1"></image>
-            <p>Ангилал 1</p>
-        </article>
-        <article>
-            <image alt="category 2"></image>
-            <p>Ангилал 2</p>
-        </article>
-        <article>
-            <image alt="category 3"></image>
-            <p>Ангилал 3</p>
-        </article>
-        <article>
-            <image alt="category 4"></image>
-            <p>Ангилал 4</p>
-        </article>
-    </nav>
-    <section>
-
-    </section>
 </body>
 
 <footer>
