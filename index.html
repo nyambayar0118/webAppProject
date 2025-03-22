@@ -1,94 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<style>
+    :root {
+    --border-sm: 1px;
+    --border-md: 2px;
+    --border-lg: 3px;
+
+    --body-margin-vertical: 5vh;
+    --body-margin-horizontal: 10vmax;
+
+    --body-default-margin: var(--body-margin-vertical) var(--body-margin-horizontal) var(--body-margin-vertical) var(--body-margin-horizontal);
+
+    --border-radius-default: 12px;
+
+    --border-color-default: hsl(0%, 0%, 50%);
+
+    --shadow-default: 0px 10px 20px hsl(0, 0%, 80%);
+}
+
+    body {
+        margin: var(--body-default-margin);
+        background-color: grey;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "section"
+            "section"
+            "nav";
+    }
+
+    body>header {
+        display: flex;
+        flex-grow: 1;
+    }
+
+    .products>div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .product-box {
+        background-color: hsl(60, 100%, 80%);
+        border-radius: var(--border-radius-default);
+        border-width: var(--border-sm);
+        box-shadow: var(--shadow-default);
+        width: 100px;
+        height: auto;
+        /* padding: 0.5rem; */
+    }
+</style>
+
 <head>
-    <link rel="stylesheet" type="text/css" href="./global.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./global.css"> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 </head>
-<header>
-    <div>
-        <a href="index.html">
-            <image src="https://fastly.picsum.photos/50/50" alt="logo"></image>
-        </a>
-    </div>
-    
-    <button>search</button>
-    <input type="text">
-    <label for="category">Ангилл</label>
-    <select id="category">
-        <option>Хувцас</option>
-        <option>Tsahilgaan бараа</option>
-        <option>Гэр ахуйн бараа</option>
-        <select>
-            <a href="./login.html">
-                <button>
-                    Log in
-                </button>
-            </a>
-            <a href="./signup.html">
-                <button>
-                    Sign up
-                </button>
-            </a>
-</header>
+
 
 <body>
-    <section>
+    <header>
+        <div>
+            <a href="index.html">
+                <img src="https://picsum.photos/50/50" alt="logo">
+            </a>
+        </div>
+
+        <button>search</button>
+        <input type="text">
+        <label for="category">Ангилл</label>
+        <select id="category">
+            <option>Хувцас</option>
+            <option>Tsahilgaan бараа</option>
+            <option>Гэр ахуйн бараа</option>
+            <select>
+                <a href="./login.html">
+                    <button>
+                        Log in
+                    </button>
+                </a>
+                <a href="./signup.html">
+                    <button>
+                        Sign up
+                    </button>
+                </a>
+    </header>
+
+    <section class="products">
         <h1>Top rated</h1>
-        <article>
-            <image alt="top rated product 1"></image>
+        <div>
+            <article>
+                <image alt="top rated product 1"></image>
                 <p>Бараа 1</p> <button>save</button>
-        </article>
-        <article>
-            <image alt="top rated product 2"></image>
+            </article>
+            <article>
+                <image alt="top rated product 2"></image>
                 <p>Бараа 2</p>
                 <button>save</button>
-        </article>
-        <article>
-            <image alt="top rated product 3"></image>
+            </article>
+            <article>
+                <image alt="top rated product 3"></image>
                 <p>Бараа 3</p> <button>save</button>
-        </article>
+            </article>
+        </div>
+
     </section>
 
 
-    <section>
+    <section class="products">
         <h2>New arrivals</h2>
-        <article class="product-box">
-            <image alt="new arrival product 1"></image>
+        <div>
+            <article class="product-box">
+                <image alt="new arrival product 1"></image>
                 <p>Бараа 1</p> <button>save</button>
-        </article>
-        <article class="product-box">
-            <image alt="new arrival product 2"></image>
+            </article>
+            <article class="product-box">
+                <image alt="new arrival product 2"></image>
                 <p>Бараа 2</p> <button>save</button>
-        </article>
-        <article class="product-box">
-            <image alt="new arrival product 3"></image>
+            </article>
+            <article class="product-box">
+                <image alt="new arrival product 3"></image>
                 <p>Бараа 3</p> <button>save</button>
-        </article>
-        <article class="product-box">
-            <image alt="new arrival product 4"></image>
+            </article>
+            <article class="product-box">
+                <image alt="new arrival product 4"></image>
                 <p>Бараа 4</p> <button>save</button>
-        </article>
+            </article>
+            <article class="product-box">
+                <image alt="new arrival product 5"></image>
+                <p>Бараа 5</p> <button>save</button>
+            </article>
+            <article class="product-box">
+                <image alt="new arrival product 6"></image>
+                <p>Бараа 6</p> <button>save</button>
+            </article>
+        </div>
+
+
     </section>
     <nav>
         <h2>Ангилал</h2>
         <article>
             <image alt="category 1"></image>
-                <p>Ангилал 1</p>
+            <p>Ангилал 1</p>
         </article>
         <article>
             <image alt="category 2"></image>
-                <p>Ангилал 2</p>
+            <p>Ангилал 2</p>
         </article>
         <article>
             <image alt="category 3"></image>
-                <p>Ангилал 3</p>
+            <p>Ангилал 3</p>
         </article>
         <article>
             <image alt="category 4"></image>
-                <p>Ангилал 4</p>
+            <p>Ангилал 4</p>
         </article>
     </nav>
     <section>

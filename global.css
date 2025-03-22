@@ -8,11 +8,11 @@
 
     --body-default-margin: var(--body-margin-vertical) var(--body-margin-horizontal) var(--body-margin-vertical) var(--body-margin-horizontal);
 
-    --border-radius-default: 4px;
+    --border-radius-default: 12px;
 
     --border-color-default: hsl(0%, 0%, 50%);
 
-    --shadow-default: 0px 10px 20px hsl(0, 0%, 30%);
+    --shadow-default: 0px 10px 20px hsl(0, 0%, 80%);
 }
 
 body {
