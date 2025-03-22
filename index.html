@@ -24,7 +24,6 @@
     }
 
     main {
-        /* margin: var(--body-default-margin); */
         background-color: grey;
         display: grid;
         grid-template-columns: auto;
@@ -37,8 +36,8 @@
     }
 
     header {
-        padding-left: 1vw;
-        padding-right: 1vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
         padding-top: 3vh;
         padding-bottom: 3vh;
 
@@ -47,6 +46,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
         background-color: hsl(266, 100%, 72%);
+        background-image: linear-gradient(to bottom,hsl(280, 100%, 50%),hsl(266, 100%, 40%), hsl(266, 100%, 40%),hsl(266, 100%, 25%));
     }
 
 
@@ -55,15 +55,21 @@
         padding-left: 2em;
         width: 300px;
         border: 2px solid hsl(0, 0%, 37%);
-        border-radius: 8px 0px 0px 8px;
+        border-radius: 8px;
         background-color: hsl(0, 0%, 100%);
-        
+
+        outline: none;
+
         &::placeholder {
             font-weight: bold;
             letter-spacing: 0.1em;
         }
     }
-    
+
+    .search-bar-wrapper input:focus::placeholder {
+        opacity: 0;
+    }
+
     .search-bar-wrapper button {
         padding: 0.7em;
         cursor: pointer;
@@ -73,10 +79,63 @@
         font-size: 13px;
     }
 
+    .category-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+
+    .header-button {
+        padding: 0.7em;
+        padding-left: 2em;
+        padding-right: 2em;
+        cursor: pointer;
+        border-radius: 8px;
+        border: 2px solid hsl(0, 0%, 37%);
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        text-decoration: none;
+        color: hsl(0, 0%, 20%);
+        background-color: hsl(0, 0%, 94%);
+        margin-left: 1vw;
+    }
+
+    .category-options {
+        display: none;
+        position: absolute;
+        background-color: white;
+        border: 1px solid hsl(0, 0%, 87%);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        z-index: 1;
+    }
+
+    .category-options li {
+        border: 1px solid hsl(0, 0%, 87%);
+        padding: 10px;
+    }
+
+    .category-options li a {
+        text-decoration: none;
+        color: hsl(0, 0%, 20%);
+        display: block;
+    }
+
+    .category-options li:hover {
+        background-color: #f0f0f0;
+    }
+
+    .category-wrapper:hover .category-options {
+        display: block;
+    }
 
 
-
-
+    .products {
+        background-color: hsl(120, 83%, 86%);
+    }
 
     .products>div {
         display: flex;
@@ -124,25 +183,23 @@
             <button>🔍</button>
         </div>
 
-        <div>
-            <label for="category">Ангилал</label>
-            <select id="category">
-                <option>Хувцас</option>
-                <option>Цахилгаан бараа</option>
-                <option>Гэр ахуйн бараа</option>
-            </select>
+        <div class="category-wrapper">
+            <button class="header-button">Ангилал</button>
+            <ul class="category-options">
+                <li><a href="#">Цахилгаан бараа</a></li>
+                <li><a href="#">Хувцас</a></li>
+                <li><a href="#">Гэр ахуйн бараа</a></li>
+                <li><a href="#">Гоёлын хэрэгсэл</a></li>
+                <li><a href="#">Бусад</a></li>
+            </ul>
         </div>
 
         <div>
-            <a href="./login.html">
-                <button>
+            <a class="header-button" href="./login.html">
                     Log in
-                </button>
             </a>
-            <a href="./signup.html">
-                <button>
+            <a class="header-button" href="./signup.html">
                     Sign up
-                </button>
             </a>
         </div>
 
