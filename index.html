@@ -19,21 +19,7 @@
         --shadow-default: 0px 10px 20px hsl(0, 0%, 80%);
     }
 
-    body {
-        margin: 0;
-    }
 
-    main {
-        background-color: grey;
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "header"
-            "section"
-            "section"
-            "nav";
-    }
 
     header {
         padding-left: 2vw;
@@ -45,8 +31,8 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-        background-color: hsl(266, 100%, 72%);
-        background-image: linear-gradient(to bottom,hsl(280, 100%, 50%),hsl(266, 100%, 40%), hsl(266, 100%, 40%),hsl(266, 100%, 25%));
+        background-color: hsl(98, 29%, 63%);
+        background-image: linear-gradient(to bottom, hsl(98, 29%, 63%) hsl(98, 29%, 63%),hsl(98, 29%, 63%) hsl(98, 29%, 63%));
     }
 
 
@@ -132,27 +118,108 @@
         display: block;
     }
 
-
-    .products {
-        background-color: hsl(120, 83%, 86%);
+    body {
+        margin: 0;
+        background-color: hsl(33, 67%, 94%);
     }
 
-    .products>div {
+    main {
+        margin: 2vh 4vw 2vh 4vw;
+        background-color: hsl(33, 67%, 94%);
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "section"
+            "section"
+            "nav";
+    }
+
+
+    .products {
+        background-color: hsl(34, 64%, 98%);
+        padding: 2vh 4vw;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        overflow: hidden;
+    }
+
+    .product-group-wrapper {
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-around;
+        scroll-snap-type: x mandatory;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        gap: 2rem;
+        padding-bottom: 1rem;
+        padding-top: 0.5rem;
+        scrollbar-width: none;
+    }
+
+    .product-group {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1rem;
+        justify-items: center;
     }
 
     .product-box {
-        background-color: hsl(60, 100%, 80%);
-        border-radius: var(--border-radius-default);
-        border-width: var(--border-sm);
-        box-shadow: var(--shadow-default);
-        width: 100px;
-        height: auto;
-        /* padding: 0.5rem; */
+        background-color: hsl(280, 100%, 50%);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        width: 250px;
+        height: 400px;
+        margin: auto;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
+
+    .product-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .product-box img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-bottom: 3px solid hsl(280, 100%, 40%);
+    }
+
+    .product-name {
+        font-size: 20px;
+        color: white;
+        margin: 10px 0;
+    }
+
+    .product-price {
+        color: hsl(0, 0%, 100%);
+        font-size: 22px;
+    }
+
+    .product-box>button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+        border-radius: 0 0 12px 12px;
+        transition: background-color 0.3s;
+    }
+
+    .product-box>button:hover {
+        background-color: hsl(0, 0%, 30%);
+    }
+
 
 
 
@@ -196,10 +263,10 @@
 
         <div>
             <a class="header-button" href="./login.html">
-                    Log in
+                Log in
             </a>
             <a class="header-button" href="./signup.html">
-                    Sign up
+                Sign up
             </a>
         </div>
 
@@ -209,18 +276,22 @@
         <section class="products">
             <h1>Top rated</h1>
             <div>
-                <article>
+                <article class="product-box">
                     <image alt="top rated product 1"></image>
                     <p>Бараа 1</p> <button>save</button>
                 </article>
-                <article>
+                <article class="product-box">
                     <image alt="top rated product 2"></image>
                     <p>Бараа 2</p>
                     <button>save</button>
                 </article>
-                <article>
+                <article class="product-box">
                     <image alt="top rated product 3"></image>
                     <p>Бараа 3</p> <button>save</button>
+                </article>
+                <article class="product-box">
+                    <image alt="top rated product 3"></image>
+                    <p>Бараа 4</p> <button>save</button>
                 </article>
             </div>
 
@@ -229,32 +300,126 @@
 
         <section class="products">
             <h2>New arrivals</h2>
-            <div>
-                <article class="product-box">
-                    <image alt="new arrival product 1"></image>
-                    <p>Бараа 1</p> <button>save</button>
-                </article>
-                <article class="product-box">
-                    <image alt="new arrival product 2"></image>
-                    <p>Бараа 2</p> <button>save</button>
-                </article>
-                <article class="product-box">
-                    <image alt="new arrival product 3"></image>
-                    <p>Бараа 3</p> <button>save</button>
-                </article>
-                <article class="product-box">
-                    <image alt="new arrival product 4"></image>
-                    <p>Бараа 4</p> <button>save</button>
-                </article>
-                <article class="product-box">
-                    <image alt="new arrival product 5"></image>
-                    <p>Бараа 5</p> <button>save</button>
-                </article>
-                <article class="product-box">
-                    <image alt="new arrival product 6"></image>
-                    <p>Бараа 6</p> <button>save</button>
-                </article>
+            <div class="product-group-wrapper">
+                <section class="product-group" id="group1">
+                    <article class="product-box">
+                        <image alt="new arrival product 1" src="./pictures/products/product1.jpg"></image>
+                        <p class="product-name">Бараа 1</p>
+                        <p class="product-price">15000₮</p>
+                        <button>save</button>
+                    </article>
+                    <article class="product-box">
+                        <image alt="new arrival product 2" src="./pictures/products/product2.jpg"></image>
+                        <p>Бараа 2</p> <button>save</button>
+                    </article>
+                    <article class="product-box">
+                        <image alt="new arrival product 3" src="./pictures/products/product3.jpg"></image>
+                        <p>Бараа 3</p> <button>save</button>
+                    </article>
+                    <article class="product-box">
+                        <image alt="new arrival product 4" src="./pictures/products/product4.jpg"></image>
+                        <p>Бараа 4</p> <button>save</button>
+                    </article>
+                    <article class="product-box">
+                        <image alt="new arrival product 5" src="./pictures/products/product5.jpg"></image>
+                        <p>Бараа 5</p> <button>save</button>
+                    </article>
+                    <article class="product-box">
+                        <image alt="new arrival product 6" src="./pictures/products/product6.jpg"></image>
+                        <p>Бараа 6</p> <button>save</button>
+                    </article>
+                </section>
+
+                <section class="product-group">
+                    <article class="product-box" id="group2">
+                        <image alt="new arrival product 1"></image>
+                        <p>Бараа 7</p> <button>save</button>
+                    </article>
+                    <article class="product-box">
+                        <image alt="new arrival product 2"></image>
+                        <p>Бараа 8</p> <button>save</button>
+                    </article>
+                    <article class="product-box">
+                        <image alt="new arrival product 3"></image>
+                        <p>Бараа 9</p> <button>save</button>
+                    </article>
+                    <article class="product-box">
+                        <image alt="new arrival product 4"></image>
+                        <p>Бараа 10</p> <button>save</button>
+                    </article>
+                    <article class="product-box">
+                        <image alt="new arrival product 5"></image>
+                        <p>Бараа 11</p> <button>save</button>
+                    </article>
+                    <article class="product-box">
+                        <image alt="new arrival product 6"></image>
+                        <p>Бараа 12</p> <button>save</button>
+                    </article>
+                </section>
+
+                <section class="product-group">
+                    <article class="product-box" id="group3">
+                        <image alt="new arrival product 1"></image>
+                        <p>Бараа 13</p> <button>save</button>
+                    </article>
+                    <article class="product-box">
+                        <image alt="new arrival product 2"></image>
+                        <p>Бараа 14</p> <button>save</button>
+                    </article>
+                    <article class="product-box">
+                        <image alt="new arrival product 3"></image>
+                        <p>Бараа 15</p> <button>save</button>
+                    </article>
+                    <article class="product-box">
+                        <image alt="new arrival product 4"></image>
+                        <p>Бараа 16</p> <button>save</button>
+                    </article>
+                    <article class="product-box">
+                        <image alt="new arrival product 5"></image>
+                        <p>Бараа 17</p> <button>save</button>
+                    </article>
+                    <article class="product-box">
+                        <image alt="new arrival product 6"></image>
+                        <p>Бараа 18</p> <button>save</button>
+                    </article>
+                </section>
+
+                <section class="product-group">
+                    <article class="product-box" id="group4">
+                        <image alt="new arrival product 1"></image>
+                        <p>Бараа 19</p> <button>save</button>
+                    </article>
+                    <article class="product-box">
+                        <image alt="new arrival product 2"></image>
+                        <p>Бараа 20</p> <button>save</button>
+                    </article>
+                    <article class="product-box">
+                        <image alt="new arrival product 3"></image>
+                        <p>Бараа 21</p> <button>save</button>
+                    </article>
+                    <article class="product-box">
+                        <image alt="new arrival product 4"></image>
+                        <p>Бараа 22</p> <button>save</button>
+                    </article>
+                    <article class="product-box">
+                        <image alt="new arrival product 5"></image>
+                        <p>Бараа 23</p> <button>save</button>
+                    </article>
+                    <article class="product-box">
+                        <image alt="new arrival product 6"></image>
+                        <p>Бараа 24</p> <button>save</button>
+                    </article>
+                </section>
             </div>
+            <nav class="product-group-nav">
+                <a href="#group1">1</a>
+                <a href="#group2">2</a>
+                <a href="#group3">3</a>
+                <a href="#group4">4</a>
+            </nav>
+
+
+
 
 
         </section>
