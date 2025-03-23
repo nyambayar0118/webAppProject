@@ -1,14 +1,13 @@
-body, header, footer {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #2c3e50;
+    background-color: #99bc85;
     color: white;
-    height: 100px;
     animation: pageBlink 6s infinite alternate;
 }
 
-header, footer {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,12 +16,20 @@ header, footer {
     position: relative;
     z-index: 10;
 }
+
 header img {
     width: 150px;
     height: auto; 
 }
 
 footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
     gap: 10px;
     margin: 0;
 }
@@ -105,18 +112,6 @@ footer button:hover, header button:hover {
     }
 }
 
-@keyframes pageBlink {
-    0% {
-        background-color: #2c3e50;
-    }
-    50% {
-        background-color: #c0392b;
-    }
-    100% {
-        background-color: #2980b9;
-    }
-}
-
 .search-container {
     display: flex;
     align-items: center;
@@ -175,4 +170,3 @@ footer button:hover, header button:hover {
     border-color: #2980b9;
     box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
 }
-
