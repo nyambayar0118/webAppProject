@@ -32,7 +32,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
         background-color: hsl(98, 29%, 63%);
-        background-image: linear-gradient(to bottom, hsl(98, 29%, 63%) hsl(98, 29%, 63%),hsl(98, 29%, 63%) hsl(98, 29%, 63%));
+        background-image: linear-gradient(to bottom, hsl(98, 29%, 70%), hsl(98, 29%, 63%), hsl(98, 29%, 63%), hsl(98, 29%, 40%));
     }
 
 
@@ -125,7 +125,7 @@
 
     main {
         margin: 2vh 4vw 2vh 4vw;
-        background-color: hsl(33, 67%, 94%);
+        background-color: hsl(34, 64%, 98%);
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: auto;
@@ -163,73 +163,13 @@
         justify-items: center;
     }
 
-    .product-box {
-        background-color: hsl(280, 100%, 50%);
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        width: 250px;
-        height: 400px;
-        margin: auto;
-        text-align: center;
-        font-family: Arial, sans-serif;
-        border-radius: 12px;
-        overflow: hidden;
-        transition: transform 0.3s, box-shadow 0.3s;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .product-box:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    }
-
-    .product-box img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-bottom: 3px solid hsl(280, 100%, 40%);
-    }
-
-    .product-name {
-        font-size: 20px;
-        color: white;
-        margin: 10px 0;
-    }
-
-    .product-price {
-        color: hsl(0, 0%, 100%);
-        font-size: 22px;
-    }
-
-    .product-box>button {
-        border: none;
-        outline: 0;
-        padding: 12px;
-        color: white;
-        background-color: #000;
-        text-align: center;
-        cursor: pointer;
-        width: 100%;
-        font-size: 18px;
-        border-radius: 0 0 12px 12px;
-        transition: background-color 0.3s;
-    }
-
-    .product-box>button:hover {
-        background-color: hsl(0, 0%, 30%);
-    }
-
-
-
-
     .logo {
         max-width: 10em;
     }
 </style>
 
 <head>
-    <!-- <link rel="stylesheet" type="text/css" href="./global.css"> -->
+    <link rel="stylesheet" type="text/css" href="./global.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Bang MN</title>
