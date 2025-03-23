@@ -1,10 +1,79 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="mn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
     <link rel="stylesheet" href="global.css">
+    
+    <style>
+        .shop-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: var(--border-radius-default);
+            box-shadow: var(--shadow-default);
+        }
+
+        .shop-info figure img {
+            border-radius: var(--border-radius-default);
+        }
+
+        .featured-products ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .featured-products li {
+            background: white;
+            padding: 10px;
+            border-radius: var(--border-radius-default);
+            box-shadow: var(--shadow-default);
+            text-align: center;
+        }
+
+        aside {
+            margin-top: 20px;
+            padding: 10px;
+            background: white;
+            border-radius: var(--border-radius-default);
+            box-shadow: var(--shadow-default);
+        }
+
+        .reviews, .leave-review {
+            margin-top: 20px;
+            padding: 10px;
+            background: white;
+            border-radius: var(--border-radius-default);
+            box-shadow: var(--shadow-default);
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border-radius: var(--border-radius-default);
+            border: var(--border-sm) solid var(--border-color-default);
+        }
+
+        button {
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: var(--border-radius-default);
+            border: none;
+            background: #007bff;
+            color: white;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
 </head>
 <body>
 
