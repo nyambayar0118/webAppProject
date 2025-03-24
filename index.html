@@ -136,7 +136,6 @@
             "nav";
     }
 
-
     .products {
         background-color: hsl(34, 64%, 98%);
         padding: 2vh 4vw;
@@ -147,26 +146,46 @@
 
     .product-group-wrapper {
         display: flex;
-        scroll-snap-type: x mandatory;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        gap: 2rem;
-        padding-bottom: 1rem;
-        padding-top: 0.5rem;
-        scrollbar-width: none;
+        white-space: nowrap;
+        animation: scroll 30s linear infinite;
+        gap: 2vw;
     }
 
+
     .product-group {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 1rem;
-        justify-items: center;
+        width: 90%;
+        padding: 1rem;
+        max-width: 1536px;
+        margin-inline: auto;
+        position: relative;
+        height: 350px;
+        overflow: hidden;
+        mask-image: linear-gradient(to right,
+                rgba(0, 0, 0, 0),
+                rgba(0, 0, 0, 0.8) 5%,
+                rgba(0, 0, 0, 1) 10%,
+                rgba(0, 0, 0, 1) 90%,
+                rgba(0, 0, 0, 0.8) 95%,
+                rgba(0, 0, 0, 0));
+        display: flex;
     }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-60%);
+        }
+    }
+
 
     .logo {
         max-width: 10em;
     }
 </style>
+
 
 <head>
     <link rel="stylesheet" type="text/css" href="./global.css">
@@ -215,23 +234,23 @@
     <main>
         <section class="products">
             <h1>Top rated</h1>
-            <div>
+            <div class="product-group">
                 <article class="product-box">
-                    <image alt="top rated product 1"></image>
-                    <p>Бараа 1</p> <button>save</button>
+                    <img alt="top rated product 1" src="./pictures/products/product1.jpg"></img>
+                    <p>Бараа 1</p> <button>Хадгалах</button>
                 </article>
                 <article class="product-box">
-                    <image alt="top rated product 2"></image>
+                    <img alt="top rated product 2" src="./pictures/products/product2.jpg"></img>
                     <p>Бараа 2</p>
-                    <button>save</button>
+                    <button>Хадгалах</button>
                 </article>
                 <article class="product-box">
-                    <image alt="top rated product 3"></image>
-                    <p>Бараа 3</p> <button>save</button>
+                    <img alt="top rated product 3" src="./pictures/products/product3.jpg"></img>
+                    <p>Бараа 3</p> <button>Хадгалах</button>
                 </article>
                 <article class="product-box">
-                    <image alt="top rated product 3"></image>
-                    <p>Бараа 4</p> <button>save</button>
+                    <img alt="top rated product 4" src="./pictures/products/product4.jpg"></img>
+                    <p>Бараа 4</p> <button>Хадгалах</button>
                 </article>
             </div>
 
@@ -240,123 +259,96 @@
 
         <section class="products">
             <h2>New arrivals</h2>
-            <div class="product-group-wrapper">
-                <section class="product-group" id="group1">
+
+            <section class="product-group">
+                <div class="product-group-wrapper">
                     <article class="product-box">
-                        <image alt="new arrival product 1" src="./pictures/products/product1.jpg"></image>
+                        <img alt="new arrival product 1" src="./pictures/products/product1.jpg"></img>
                         <p class="product-name">Бараа 1</p>
                         <p class="product-price">15000₮</p>
-                        <button>save</button>
+                        <button>Хадгалах</button>
                     </article>
-                    <article class="product-box">
-                        <image alt="new arrival product 2" src="./pictures/products/product2.jpg"></image>
-                        <p>Бараа 2</p> <button>save</button>
-                    </article>
-                    <article class="product-box">
-                        <image alt="new arrival product 3" src="./pictures/products/product3.jpg"></image>
-                        <p>Бараа 3</p> <button>save</button>
-                    </article>
-                    <article class="product-box">
-                        <image alt="new arrival product 4" src="./pictures/products/product4.jpg"></image>
-                        <p>Бараа 4</p> <button>save</button>
-                    </article>
-                    <article class="product-box">
-                        <image alt="new arrival product 5" src="./pictures/products/product5.jpg"></image>
-                        <p>Бараа 5</p> <button>save</button>
-                    </article>
-                    <article class="product-box">
-                        <image alt="new arrival product 6" src="./pictures/products/product6.jpg"></image>
-                        <p>Бараа 6</p> <button>save</button>
-                    </article>
-                </section>
 
-                <section class="product-group">
+                    <article class="product-box">
+                        <img alt="new arrival product 2" src="./pictures/products/product2.jpg"></img>
+                        <p class="product-name">Бараа 2</p>
+                        <p class="product-price">15000₮</p>
+                        <button>Хадгалах</button>
+                    </article>
+
+                    <article class="product-box">
+                        <img alt="new arrival product 3" src="./pictures/products/product3.jpg"></img>
+                        <p class="product-name">Бараа 3</p>
+                        <p class="product-price">15000₮</p>
+                        <button>Хадгалах</button>
+                    </article>
+
+                    <article class="product-box">
+                        <img alt="new arrival product 4" src="./pictures/products/product4.jpg"></img>
+                        <p class="product-name">Бараа 4</p>
+                        <p class="product-price">15000₮</p>
+                        <button>Хадгалах</button>
+                    </article>
+
+                    <article class="product-box">
+                        <img alt="new arrival product 5" src="./pictures/products/product5.jpg"></img>
+                        <p class="product-name">Бараа 5</p>
+                        <p class="product-price">15000₮</p>
+                        <button>Хадгалах</button>
+                    </article>
+
+                    <article class="product-box">
+                        <img alt="new arrival product 6" src="./pictures/products/product6.jpg"></img>
+                        <p class="product-name">Бараа 6</p>
+                        <p class="product-price">15000₮</p>
+                        <button>Хадгалах</button>
+                    </article>
+
                     <article class="product-box" id="group2">
-                        <image alt="new arrival product 1"></image>
-                        <p>Бараа 7</p> <button>save</button>
+                        <img alt="new arrival product 1" src="./pictures/products/product7.jpg"></img>
+                        <p class="product-name">Бараа 7</p>
+                        <p class="product-price">15000₮</p>
+                        <button>Хадгалах</button>
                     </article>
-                    <article class="product-box">
-                        <image alt="new arrival product 2"></image>
-                        <p>Бараа 8</p> <button>save</button>
-                    </article>
-                    <article class="product-box">
-                        <image alt="new arrival product 3"></image>
-                        <p>Бараа 9</p> <button>save</button>
-                    </article>
-                    <article class="product-box">
-                        <image alt="new arrival product 4"></image>
-                        <p>Бараа 10</p> <button>save</button>
-                    </article>
-                    <article class="product-box">
-                        <image alt="new arrival product 5"></image>
-                        <p>Бараа 11</p> <button>save</button>
-                    </article>
-                    <article class="product-box">
-                        <image alt="new arrival product 6"></image>
-                        <p>Бараа 12</p> <button>save</button>
-                    </article>
-                </section>
 
-                <section class="product-group">
-                    <article class="product-box" id="group3">
-                        <image alt="new arrival product 1"></image>
-                        <p>Бараа 13</p> <button>save</button>
-                    </article>
                     <article class="product-box">
-                        <image alt="new arrival product 2"></image>
-                        <p>Бараа 14</p> <button>save</button>
+                        <img alt="new arrival product 2" src="./pictures/products/product8.jpg"></img>
+                        <p class="product-name">Бараа 8</p>
+                        <p class="product-price">15000₮</p>
+                        <button>Хадгалах</button>
                     </article>
-                    <article class="product-box">
-                        <image alt="new arrival product 3"></image>
-                        <p>Бараа 15</p> <button>save</button>
-                    </article>
-                    <article class="product-box">
-                        <image alt="new arrival product 4"></image>
-                        <p>Бараа 16</p> <button>save</button>
-                    </article>
-                    <article class="product-box">
-                        <image alt="new arrival product 5"></image>
-                        <p>Бараа 17</p> <button>save</button>
-                    </article>
-                    <article class="product-box">
-                        <image alt="new arrival product 6"></image>
-                        <p>Бараа 18</p> <button>save</button>
-                    </article>
-                </section>
 
-                <section class="product-group">
-                    <article class="product-box" id="group4">
-                        <image alt="new arrival product 1"></image>
-                        <p>Бараа 19</p> <button>save</button>
-                    </article>
                     <article class="product-box">
-                        <image alt="new arrival product 2"></image>
-                        <p>Бараа 20</p> <button>save</button>
+                        <img alt="new arrival product 3" src="./pictures/products/product1.jpg"></img>
+                        <p class="product-name">Бараа 9</p>
+                        <p class="product-price">15000₮</p>
+                        <button>Хадгалах</button>
                     </article>
+
                     <article class="product-box">
-                        <image alt="new arrival product 3"></image>
-                        <p>Бараа 21</p> <button>save</button>
+                        <img alt="new arrival product 4" src="./pictures/products/product2.jpg"></img>
+                        <p class="product-name">Бараа 10</p>
+                        <p class="product-price">15000₮</p>
+                        <button>Хадгалах</button>
                     </article>
+
                     <article class="product-box">
-                        <image alt="new arrival product 4"></image>
-                        <p>Бараа 22</p> <button>save</button>
+                        <img alt="new arrival product 5" src="./pictures/products/product3.jpg"></img>
+                        <p class="product-name">Бараа 11</p>
+                        <p class="product-price">15000₮</p>
+                        <button>Хадгалах</button>
                     </article>
+
                     <article class="product-box">
-                        <image alt="new arrival product 5"></image>
-                        <p>Бараа 23</p> <button>save</button>
+                        <img alt="new arrival product 6" src="./pictures/products/product4.jpg"></img>
+                        <p class="product-name">Бараа 12</p>
+                        <p class="product-price">15000₮</p>
+                        <button>Хадгалах</button>
                     </article>
-                    <article class="product-box">
-                        <image alt="new arrival product 6"></image>
-                        <p>Бараа 24</p> <button>save</button>
-                    </article>
-                </section>
-            </div>
-            <nav class="product-group-nav">
-                <a href="#group1">1</a>
-                <a href="#group2">2</a>
-                <a href="#group3">3</a>
-                <a href="#group4">4</a>
-            </nav>
+
+
+                </div>
+            </section>
 
 
 
@@ -366,19 +358,19 @@
         <nav>
             <h2>Ангилал</h2>
             <article>
-                <image alt="category 1"></image>
+                <img alt="category 1"></img>
                 <p>Ангилал 1</p>
             </article>
             <article>
-                <image alt="category 2"></image>
+                <img alt="category 2"></img>
                 <p>Ангилал 2</p>
             </article>
             <article>
-                <image alt="category 3"></image>
+                <img alt="category 3"></img>
                 <p>Ангилал 3</p>
             </article>
             <article>
-                <image alt="category 4"></image>
+                <img alt="category 4"></img>
                 <p>Ангилал 4</p>
             </article>
         </nav>
