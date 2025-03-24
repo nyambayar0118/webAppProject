@@ -1,53 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="mn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saved products</title>
+    <title>Product Details</title>
+    <link rel="stylesheet" href="saved.css">
 </head>
-<header>
-    <div>
-        <a href="index.html">
-            <image alt="logo"></image>
-        </a>
-    </div>
-
-    <button>search</button>
-    <input type="text">
-    <label for="category">Ангилал</label>
-    <select id="category">
-        <option>Хувцас</option>
-        <option>Цахилгаан бараа</option>
-        <option>Гэр ахуйн бараа</option>
-        <select>
-            <a href="./login.html">
-                <button>
-                    Log in
-                </button>
-            </a>
-            <a href="./signup.html">
-                <button>
-                    Sign up
-                </button>
-            </a>
-</header>
-
 <body>
 
+    <header>
+        <a href="index.html"><img src="https://picsum.photos/50/50" alt="Logo" class="logo"></a>
+        <nav>
+            <a href="index.html"><button>Буцах</button></a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-details">
+            <figure class="product-figure">
+                <img id="main-product-image" src="https://picsum.photos/400/300" alt="Барааны зураг">
+                <figcaption>Барааны зураг</figcaption>
+            </figure>
+            <article class="product-info">
+                <h1>Барааны нэр</h1>
+                <p class="price">50,000₮</p>
+                <p>baraanii delgerengui medeelel</p>
+                <button>Сагсанд нэмэх</button>
+            </article>
+        </section>
+
+        <section class="product-image-gallery">
+            <h3>Барааны бусад зураг</h3>
+            <div class="image-thumbnails">
+                <img src="https://picsum.photos/400/300?1" alt="Талаас 1" class="thumbnail" onclick="changeImage('https://picsum.photos/400/300?1')">
+                <img src="https://picsum.photos/400/300?2" alt="Талаас 2" class="thumbnail" onclick="changeImage('https://picsum.photos/400/300?2')">
+                <img src="https://picsum.photos/400/300?3" alt="Талаас 3" class="thumbnail" onclick="changeImage('https://picsum.photos/400/300?3')">
+                <img src="https://picsum.photos/400/300?4" alt="Талаас 4" class="thumbnail" onclick="changeImage('https://picsum.photos/400/300?4')">
+            </div>
+        </section>
+
+
+        <section class="related-products">
+            <h2>Бусад бараанууд</h2>
+            <ul class="product-boxes">
+                <li class="product-box">
+                    <img src="https://picsum.photos/200/150" alt="Бараа 1">
+                    <p>Бараа 1 - 45,000₮</p>
+                </li>
+                <li class="product-box">
+                    <img src="https://picsum.photos/200/150" alt="Бараа 2">
+                    <p>Бараа 2 - 30,000₮</p>
+                </li>
+                <li class="product-box">
+                    <img src="https://picsum.photos/200/150" alt="Бараа 3">
+                    <p>Бараа 3 - 25,000₮</p>
+                </li>
+                <li class="product-box">
+                    <img src="https://picsum.photos/200/150" alt="Бараа 4">
+                    <p>Бараа 4 - 60,000₮</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Дэлгүүрийн Веб</p>
+    </footer>
+
+    <script>
+        function changeImage(imageUrl) {
+            document.getElementById('main-product-image').src = imageUrl;
+        }
+    </script>
+
 </body>
-
-<footer>
-    <nav>
-        <ul>
-            <li>Холбоо барих</li>
-            <li>Гомдол гаргах</li>
-            <li>Борлуулагчаар бүртгүүлэх</li>
-            <li>Санал хүсэлт</li>
-            <li></li>
-            <li></li>
-        </ul>
-    </nav>
-</footer>
-
 </html>
