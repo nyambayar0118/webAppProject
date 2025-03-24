@@ -1,32 +1,66 @@
 :root {
-    --border-sm: 1px;
-    --border-md: 2px;
-    --border-lg: 3px;
+    --main-color-1: hsl(33, 67%, 94%);
+    --main-color-2: hsl(34, 64%, 98%);
+    --main-color-3: hsl(136, 26%, 92%);
+    --main-color-4: hsl(98, 29%, 63%);
 
-    --body-margin-vertical: 5vh;
-    --body-margin-horizontal: 10vmax;
 
-    --body-default-margin: var(--body-margin-vertical) var(--body-margin-horizontal) var(--body-margin-vertical) var(--body-margin-horizontal);
-
-    --border-radius-default: 12px;
-
-    --border-color-default: hsl(0%, 0%, 50%);
-
-    --shadow-default: 0px 10px 20px hsl(0, 0%, 80%);
 }
 
-body {
-    margin: var(--body-default-margin);
-    background-color: grey;
-}
-
-.container {
-    display: grid;
-    /* grid-template-columns: ; */
-}
 
 .product-box {
-    border-radius: var(--border-radius-default);
-    border-width: var(--border-sm);
-    box-shadow: var(--shadow-default);
+    background-color: hsl(280, 100%, 50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 250px;
+    height: 400px;
+    margin: auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.product-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid hsl(280, 100%, 40%);
+}
+
+.product-name {
+    font-size: 20px;
+    color: white;
+    margin: 10px 0;
+}
+
+.product-price {
+    color: hsl(0, 0%, 100%);
+    font-size: 22px;
+}
+
+.product-box>button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 0 0 12px 12px;
+    transition: background-color 0.3s;
+}
+
+.product-box>button:hover {
+    background-color: hsl(0, 0%, 30%);
 }

@@ -6,127 +6,127 @@
     <title>Shop</title>
     <link rel="stylesheet" href="global.css">
     
-    <style>
-        :root {
-            --border-sm: 1px;
-            --border-md: 2px;
-            --border-lg: 3px;
-    
-            --body-margin-vertical: 5vh;
-            --body-margin-horizontal: 10vmax;
-    
-            --body-default-margin: var(--body-margin-vertical) var(--body-margin-horizontal) var(--body-margin-vertical) var(--body-margin-horizontal);
-    
-            --border-radius-default: 12px;
-    
-            --border-color-default: hsl(0%, 0%, 50%);
-    
-            --shadow-default: 0px 10px 20px hsl(0, 0%, 80%);
-        }
-    
-    
-    
-        header {
-            padding-left: 2vw;
-            padding-right: 2vw;
-            padding-top: 3vh;
-            padding-bottom: 3vh;
-    
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            background-color: hsl(98, 29%, 63%);
-            background-image: linear-gradient(to bottom, hsl(98, 29%, 63%) hsl(98, 29%, 63%),hsl(98, 29%, 63%) hsl(98, 29%, 63%));
-        }
-    
-    
-        .search-bar-wrapper input {
-            padding: 0.75em 1em;
-            padding-left: 2em;
-            width: 300px;
-            border: 2px solid hsl(0, 0%, 37%);
-            border-radius: 8px;
-            background-color: hsl(0, 0%, 100%);
-    
-            outline: none;
-    
-            &::placeholder {
-                font-weight: bold;
-                letter-spacing: 0.1em;
-            }
-        }
-    
-        .search-bar-wrapper input:focus::placeholder {
-            opacity: 0;
-        }
-    
-        .search-bar-wrapper button {
-            padding: 0.7em;
-            cursor: pointer;
-            border-radius: 0px 8px 8px 0px;
-            border: 2px solid hsl(0, 0%, 37%);
-            transform: translateX(-1em);
-            font-size: 13px;
-        }
-    
-        .category-wrapper {
-            position: relative;
-            display: inline-block;
-        }
-    
-        .header-button {
-            padding: 0.7em;
-            padding-left: 2em;
-            padding-right: 2em;
-            cursor: pointer;
-            border-radius: 8px;
-            border: 2px solid hsl(0, 0%, 37%);
-            font-size: 13px;
+<style>
+    :root {
+        --border-sm: 1px;
+        --border-md: 2px;
+        --border-lg: 3px;
+
+        --body-margin-vertical: 5vh;
+        --body-margin-horizontal: 10vmax;
+
+        --body-default-margin: var(--body-margin-vertical) var(--body-margin-horizontal) var(--body-margin-vertical) var(--body-margin-horizontal);
+
+        --border-radius-default: 12px;
+
+        --border-color-default: hsl(0%, 0%, 50%);
+
+        --shadow-default: 0px 10px 20px hsl(0, 0%, 80%);
+    }
+
+
+
+    header {
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: hsl(98, 29%, 63%);
+        background-image: linear-gradient(to bottom, hsl(98, 29%, 63%) hsl(98, 29%, 63%),hsl(98, 29%, 63%) hsl(98, 29%, 63%));
+    }
+
+
+    .search-bar-wrapper input {
+        padding: 0.75em 1em;
+        padding-left: 2em;
+        width: 300px;
+        border: 2px solid hsl(0, 0%, 37%);
+        border-radius: 8px;
+        background-color: hsl(0, 0%, 100%);
+
+        outline: none;
+
+        &::placeholder {
             font-weight: bold;
             letter-spacing: 0.1em;
-            text-decoration: none;
-            color: hsl(0, 0%, 20%);
-            background-color: hsl(0, 0%, 94%);
-            margin-left: 1vw;
         }
-    
-        .category-options {
-            display: none;
-            position: absolute;
-            background-color: white;
-            border: 1px solid hsl(0, 0%, 87%);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            width: 200px;
-            z-index: 1;
-        }
-    
-        .category-options li {
-            border: 1px solid hsl(0, 0%, 87%);
-            padding: 10px;
-        }
-    
-        .category-options li a {
-            text-decoration: none;
-            color: hsl(0, 0%, 20%);
-            display: block;
-        }
-    
-        .category-options li:hover {
-            background-color: #f0f0f0;
-        }
-    
-        .category-wrapper:hover .category-options {
-            display: block;
-        }
-    
-        body {
-            margin: 0;
-            background-color: hsl(33, 67%, 94%);
-        }        .shop-info {
+    }
+
+    .search-bar-wrapper input:focus::placeholder {
+        opacity: 0;
+    }
+
+    .search-bar-wrapper button {
+        padding: 0.7em;
+        cursor: pointer;
+        border-radius: 0px 8px 8px 0px;
+        border: 2px solid hsl(0, 0%, 37%);
+        transform: translateX(-1em);
+        font-size: 13px;
+    }
+
+    .category-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+
+    .header-button {
+        padding: 0.7em;
+        padding-left: 2em;
+        padding-right: 2em;
+        cursor: pointer;
+        border-radius: 8px;
+        border: 2px solid hsl(0, 0%, 37%);
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        text-decoration: none;
+        color: hsl(0, 0%, 20%);
+        background-color: hsl(0, 0%, 94%);
+        margin-left: 1vw;
+    }
+
+    .category-options {
+        display: none;
+        position: absolute;
+        background-color: white;
+        border: 1px solid hsl(0, 0%, 87%);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        z-index: 1;
+    }
+
+    .category-options li {
+        border: 1px solid hsl(0, 0%, 87%);
+        padding: 10px;
+    }
+
+    .category-options li a {
+        text-decoration: none;
+        color: hsl(0, 0%, 20%);
+        display: block;
+    }
+
+    .category-options li:hover {
+        background-color: #f0f0f0;
+    }
+
+    .category-wrapper:hover .category-options {
+        display: block;
+    }
+
+    body {
+        margin: 0;
+        background-color: hsl(33, 67%, 94%);
+    }        .shop-info {
             display: flex;
             align-items: center;
             gap: 20px;
@@ -192,45 +192,18 @@
         button:hover {
             background: #0056b3;
         }
-        .logo {
-        max-width: 10em;
-    }
     </style>
 </head>
 <body>
 
     <header>
-        <div>
-            <a href="index.html">
-                <img class="logo" src="./pictures/site elements/logo2.png" alt="logo">
-            </a>
-        </div>
-
-        <div class="search-bar-wrapper">
-            <input type="text" placeholder="Бүтээгдэхүүн хайх">
+        <a href="index.html"><img src="https://picsum.photos/50/50" alt="Logo" class="logo"></a>
+        <nav>
+            <input type="search" placeholder="Хайх...">
             <button>🔍</button>
-        </div>
-
-        <div class="category-wrapper">
-            <button class="header-button">Ангилал</button>
-            <ul class="category-options">
-                <li><a href="#">Цахилгаан бараа</a></li>
-                <li><a href="#">Хувцас</a></li>
-                <li><a href="#">Гэр ахуйн бараа</a></li>
-                <li><a href="#">Гоёлын хэрэгсэл</a></li>
-                <li><a href="#">Бусад</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <a class="header-button" href="./login.html">
-                Log in
-            </a>
-            <a class="header-button" href="./signup.html">
-                Sign up
-            </a>
-        </div>
-
+            <a href="login.html"><button>Log In</button></a>
+            <a href="signup.html"><button>Sign Up</button></a>
+        </nav>
     </header>
 
     <main>
