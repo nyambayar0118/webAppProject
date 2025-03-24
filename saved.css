@@ -33,10 +33,23 @@ header, footer {
 }
 
 header {
+    background-color: #99bc85;
     top: 0;
     left: 0;
 }
-
+footer button, header button {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border: none;
+    padding: 10px 40px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-right: 100px;
+}
 footer {
     bottom: 0;
     left: 0;
@@ -44,8 +57,9 @@ footer {
 }
 
 main {
-    margin-top: 80px;
+    margin-top: 100px;
     padding-bottom: 60px;
+    
 }
 
 .product-details {
@@ -56,10 +70,11 @@ main {
     padding: 20px;
     border-radius: var(--border-radius-default);
     box-shadow: var(--shadow-default);
+    padding: 100px;
 }
 
 .product-figure {
-    border: 2px solid white; /* Цагаан border нэмлээ */
+    border: 2px solid white; 
     padding: 10px;
     background-color: white;
     border-radius: var(--border-radius-default);
@@ -85,7 +100,7 @@ button {
     padding: 10px 15px;
     border-radius: var(--border-radius-default);
     border: none;
-    background: #007bff;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
     color: white;
 }
 
