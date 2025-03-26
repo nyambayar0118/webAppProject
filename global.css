@@ -7,12 +7,19 @@
 
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body a {
+    text-decoration: none;
+}
 
 .product-box {
     background-color: var(--main-color-1);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 200px;
-    height: 350px;
+    width: 15rem;
+    height: 20rem;
     margin: auto;
     text-align: center;
     border-radius: 12px;
@@ -21,6 +28,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .product-box:hover {
@@ -30,7 +38,8 @@
 
 .product-box img {
     width: 100%;
-    height: 100%;
+    height: 15rem;
+    max-height: 50%;
     object-fit: cover;
     border-bottom: 3px solid var(--main-color-3);
 }
