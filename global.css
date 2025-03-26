@@ -6,7 +6,49 @@
 
 
 }
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
+    gap: 10px;
+    margin: 0;
+}
 
+footer button, header button {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+footer button:hover, header button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+}
+
+.header-button {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 
 .product-box {
     background-color: hsl(280, 100%, 50%);
