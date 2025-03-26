@@ -7,12 +7,15 @@
 
 }
 
+body a {
+    text-decoration: none;
+}
 
 .product-box {
     background-color: var(--main-color-1);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 200px;
-    height: 350px;
+    width: 15rem;
+    height: 20rem;
     margin: auto;
     text-align: center;
     border-radius: 12px;
