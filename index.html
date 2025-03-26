@@ -289,7 +289,7 @@
             font-size: 2rem;
             font-weight: 800;
             letter-spacing: 0.1rem;
-            
+
         }
 
         @media (max-width: 768px) {
@@ -310,6 +310,25 @@
 
             &>a>.product-box {
                 width: 10rem;
+
+
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            .map iframe {
+                height: 300px;
+            }
+
+            .product-group-all {
+                grid-template-columns: repeat(2, minmax(5rem, 1fr));
+                
+                &>a>.product-box {
+                width: 9rem;
+
+
+            }
             }
         }
 
@@ -333,15 +352,6 @@
                     background-color: var(--main-color-3);
                     transition: background-color 0.5s;
                 }
-            }
-        }
-
-
-
-
-        @media (max-width: 768px) {
-            .map iframe {
-                height: 300px;
             }
         }
     </style>
