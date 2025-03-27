@@ -26,6 +26,27 @@
             --shadow-default: 0px 10px 20px hsl(0, 0%, 80%);
         } */
 
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --main-color-1: hsl(0, 0%, 20%);
+                --main-color-2: hsl(0, 0%, 30%);
+                --text-color-light: #fff;
+            }
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        p,
+        a
+        button {
+            color: var(--text-color-light);
+        }
+
+        .product-box a, p {
+            color: var(--text-color-light);
+        }
 
 
         header {
@@ -150,8 +171,8 @@
             padding: 2vh 4vw;
             display: grid;
             grid-template-areas:
-                "section section section secion";  
-            
+                "section section section secion";
+
         }
 
         .products {
@@ -335,12 +356,12 @@
 
             .product-group-all {
                 grid-template-columns: repeat(2, minmax(5rem, 1fr));
-                
+
                 &>a>.product-box {
-                width: 9rem;
+                    width: 9rem;
 
 
-            }
+                }
             }
         }
 
@@ -791,14 +812,14 @@
                     <li><a href="facebook.com">Facebook</a> </li>
                 </ul>
             </section>
-            
+
             <section>
                 <h3>Хаяг</h3>
                 <ul>
                     <li>Сүхбаатар дүүрэг, 1-р хороо, Улаанбаатар хот, Монгол улс</li>
                 </ul>
             </section>
-    
+
             <section>
                 <h3>Тусламж</h3>
                 <ul>

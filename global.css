@@ -3,6 +3,9 @@
     --main-color-2: hsl(34, 64%, 98%);
     --main-color-3: hsl(136, 26%, 92%);
     --main-color-4: hsl(98, 29%, 63%);
+
+    --text-color-light: hsl(98, 29%, 63%);
+    --text-color-dark: hsl(0, 0%, 100%);
 }
 
 *, *::before, *::after {
@@ -44,12 +47,12 @@ body a {
 
 .product-name {
     font-size: 20px;
-    color: rgb(0, 0, 0);
+    color: var(--text-color-light);
     margin: 10px 0;
 }
 
 .product-price {
-    color: hsl(0, 0%, 0%);
+    color: var(--text-color-light);
     font-size: 22px;
 }
 
