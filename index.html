@@ -26,6 +26,27 @@
             --shadow-default: 0px 10px 20px hsl(0, 0%, 80%);
         } */
 
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --main-color-1: hsl(0, 0%, 20%);
+                --main-color-2: hsl(0, 0%, 30%);
+                --text-color-light: #fff;
+            }
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        p,
+        a
+        button {
+            color: var(--text-color-light);
+        }
+
+        .product-box a, p {
+            color: var(--text-color-light);
+        }
 
 
         header {
@@ -145,6 +166,15 @@
                 "section";
         }
 
+        footer {
+            background-color: var(--main-color-4);
+            padding: 2vh 4vw;
+            display: grid;
+            grid-template-areas:
+                "section section section secion";
+
+        }
+
         .products {
             padding: 2vh 4vw;
             overflow: hidden;
@@ -163,7 +193,6 @@
             animation: scroll 30s linear infinite;
             gap: 2vw;
         }
-
 
         .product-group {
             width: 90%;
@@ -192,7 +221,6 @@
                 transform: translateX(-60%);
             }
         }
-
 
         .logo {
             max-width: 10em;
@@ -289,6 +317,7 @@
             font-size: 2rem;
             font-weight: 800;
             letter-spacing: 0.1rem;
+            color: var(--main-color-4);
 
         }
 
@@ -327,12 +356,12 @@
 
             .product-group-all {
                 grid-template-columns: repeat(2, minmax(5rem, 1fr));
-                
+
                 &>a>.product-box {
-                width: 9rem;
+                    width: 9rem;
 
 
-            }
+                }
             }
         }
 
@@ -773,8 +802,38 @@
 
     </main>
 
+    <footer>
+        <nav>
+            <section>
+                <h3>Холбоо барих</h3>
+                <ul>
+                    <li><a href="tel:+976 95573778">Утас: (+976) 95573778</a></li>
+                    <li><a href="mailto: nyambayar2014@gmail.com">И-мэйл: nyambayar2014@gmail.com</a></li>
+                    <li><a href="facebook.com">Facebook</a> </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Хаяг</h3>
+                <ul>
+                    <li>Сүхбаатар дүүрэг, 1-р хороо, Улаанбаатар хот, Монгол улс</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Тусламж</h3>
+                <ul>
+                    <li><a href="tel:+976 95573778">Холбоо барих</a></li>
+                    <li><a href="mailto: nyambayar2014@gmail.com">Гомдол гаргах</a></li>
+                    <li><a href="shopsignup.html">Борлуулагчаар бүртгүүлэх</li>
+                    <li><a href="mailto: nyambayar2014@gmail.com">Санал хүсэлт</a></li>
+                </ul>
+            </section>
+        </nav>
+    </footer>
 </body>
 
+<<<<<<< HEAD
 <footer>
     <nav>
         <ul>
@@ -785,5 +844,8 @@
         </ul>
     </nav>
 </footer>
+=======
+
+>>>>>>> ed31bf9b809fab6e37aea8689d0c691e5e14b8b8
 
 </html>
