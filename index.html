@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="./global.css">
+    <link rel="stylesheet" type="text/css" href="./css/global.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Bang MN</title>
@@ -26,6 +26,27 @@
             --shadow-default: 0px 10px 20px hsl(0, 0%, 80%);
         } */
 
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --main-color-1: hsl(0, 0%, 20%);
+                --main-color-2: hsl(0, 0%, 30%);
+                --text-color-light: #fff;
+            }
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        p,
+        a
+        button {
+            color: var(--text-color-light);
+        }
+
+        .product-box a, p {
+            color: var(--text-color-light);
+        }
 
 
         header {
@@ -145,6 +166,15 @@
                 "section";
         }
 
+        footer {
+            background-color: var(--main-color-4);
+            padding: 2vh 4vw;
+            display: grid;
+            grid-template-areas:
+                "section section section secion";
+
+        }
+
         .products {
             padding: 2vh 4vw;
             overflow: hidden;
@@ -163,7 +193,6 @@
             animation: scroll 30s linear infinite;
             gap: 2vw;
         }
-
 
         .product-group {
             width: 90%;
@@ -192,7 +221,6 @@
                 transform: translateX(-60%);
             }
         }
-
 
         .logo {
             max-width: 10em;
@@ -289,6 +317,7 @@
             font-size: 2rem;
             font-weight: 800;
             letter-spacing: 0.1rem;
+            color: var(--main-color-4);
 
         }
 
@@ -327,12 +356,12 @@
 
             .product-group-all {
                 grid-template-columns: repeat(2, minmax(5rem, 1fr));
-                
+
                 &>a>.product-box {
-                width: 9rem;
+                    width: 9rem;
 
 
-            }
+                }
             }
         }
 
@@ -419,6 +448,25 @@
                     <img alt="top rated product 4" src="./pictures/products/product4.jpg"></img>
                     <p>Бараа 4</p> <button>Хадгалах</button>
                 </article>
+            <h1>Top rated</h1>
+            <div>
+                <article class="product-box">
+                    <image alt="top rated product 1"></image>
+                    <p>Бараа 1</p> <button>save</button>
+                </article>
+                <article class="product-box">
+                    <image alt="top rated product 2"></image>
+                    <p>Бараа 2</p>
+                    <button>save</button>
+                </article>
+                <article class="product-box">
+                    <image alt="top rated product 3"></image>
+                    <p>Бараа 3</p> <button>save</button>
+                </article>
+                <article class="product-box">
+                    <image alt="top rated product 3"></image>
+                    <p>Бараа 4</p> <button>save</button>
+                </article>
             </div>
 
         </section>
@@ -429,7 +477,7 @@
 
             <section class="product-group">
                 <div class="product-group-scroll">
-                    <a href="product.html>">
+                    <a href="saved.html">
                         <article class="product-box">
                             <img alt="new arrival product 1" src="./pictures/products/product1.jpg"></img>
                             <p class="product-name">Бараа 1</p>
@@ -438,7 +486,7 @@
                         </article>
                     </a>
 
-                    <a href="product.html">
+                    <a href="saved.html">
                         <article class="product-box">
                             <img alt="new arrival product 2" src="./pictures/products/product2.jpg"></img>
                             <p class="product-name">Бараа 2</p>
@@ -447,7 +495,7 @@
                         </article>
                     </a>
 
-                    <a href="product.html">
+                    <a href="saved.html">
                         <article class="product-box">
                             <img alt="new arrival product 3" src="./pictures/products/product3.jpg"></img>
                             <p class="product-name">Бараа 3</p>
@@ -456,7 +504,7 @@
                         </article>
                     </a>
 
-                    <a href="product.html">
+                    <a href="saved.html">
                         <article class="product-box">
                             <img alt="new arrival product 4" src="./pictures/products/product4.jpg"></img>
                             <p class="product-name">Бараа 4</p>
@@ -465,7 +513,7 @@
                         </article>
                     </a>
 
-                    <a href="product.html">
+                    <a href="saved.html">
                         <article class="product-box">
                             <img alt="new arrival product 5" src="./pictures/products/product5.jpg"></img>
                             <p class="product-name">Бараа 5</p>
@@ -474,7 +522,7 @@
                         </article>
                     </a>
 
-                    <a href="product.html">
+                    <a href="saved.html">
                         <article class="product-box">
                             <img alt="new arrival product 6" src="./pictures/products/product6.jpg"></img>
                             <p class="product-name">Бараа 6</p>
@@ -483,7 +531,7 @@
                         </article>
                     </a>
 
-                    <a href="product.html">
+                    <a href="saved.html">
                         <article class="product-box" id="group2">
                             <img alt="new arrival product 7" src="./pictures/products/product7.jpg"></img>
                             <p class="product-name">Бараа 7</p>
@@ -492,7 +540,7 @@
                         </article>
                     </a>
 
-                    <a href="product.html">
+                    <a href="saved.html">
                         <article class="product-box">
                             <img alt="new arrival product 8" src="./pictures/products/product8.jpg"></img>
                             <p class="product-name">Бараа 8</p>
@@ -501,7 +549,7 @@
                         </article>
                     </a>
 
-                    <a href="product.html">
+                    <a href="saved.html">
                         <article class="product-box">
                             <img alt="new arrival product 9" src="./pictures/products/product1.jpg"></img>
                             <p class="product-name">Бараа 9</p>
@@ -510,7 +558,7 @@
                         </article>
                     </a>
 
-                    <a href="product.html">
+                    <a href="saved.html">
                         <article class="product-box">
                             <img alt="new arrival product 10" src="./pictures/products/product2.jpg"></img>
                             <p class="product-name">Бараа 10</p>
@@ -519,7 +567,7 @@
                         </article>
                     </a>
 
-                    <a href="product.html">
+                    <a href="saved.html">
                         <article class="product-box">
                             <img alt="new arrival product 11" src="./pictures/products/product3.jpg"></img>
                             <p class="product-name">Бараа 11</p>
@@ -528,7 +576,7 @@
                         </article>
                     </a>
 
-                    <a href="product.html">
+                    <a href="saved.html">
                         <article class="product-box">
                             <img alt="new arrival product 12" src="./pictures/products/product4.jpg"></img>
                             <p class="product-name">Бараа 12</p>
@@ -618,7 +666,7 @@
 
             <section class="product-group" style="mask-image: none;">
                 <div class="product-group-all">
-                    <a href="product.html>">
+                    <a href="saved.html">
                         <article class="product-box">
                             <img alt="new arrival product 1" src="./pictures/products/product1.jpg"></img>
                             <p class="product-name">Бараа 1</p>
@@ -627,7 +675,7 @@
                         </article>
                     </a>
 
-                    <a href="product.html">
+                    <a href="saved.html">
                         <article class="product-box">
                             <img alt="new arrival product 2" src="./pictures/products/product2.jpg"></img>
                             <p class="product-name">Бараа 2</p>
@@ -636,7 +684,7 @@
                         </article>
                     </a>
 
-                    <a href="product.html">
+                    <a href="saved.html">
                         <article class="product-box">
                             <img alt="new arrival product 3" src="./pictures/products/product3.jpg"></img>
                             <p class="product-name">Бараа 3</p>
@@ -645,7 +693,7 @@
                         </article>
                     </a>
 
-                    <a href="product.html">
+                    <a href="saved.html">
                         <article class="product-box">
                             <img alt="new arrival product 4" src="./pictures/products/product4.jpg"></img>
                             <p class="product-name">Бараа 4</p>
@@ -654,7 +702,7 @@
                         </article>
                     </a>
 
-                    <a href="product.html">
+                    <a href="saved.html">
                         <article class="product-box">
                             <img alt="new arrival product 5" src="./pictures/products/product5.jpg"></img>
                             <p class="product-name">Бараа 5</p>
@@ -663,7 +711,7 @@
                         </article>
                     </a>
 
-                    <a href="product.html">
+                    <a href="saved.html">
                         <article class="product-box">
                             <img alt="new arrival product 6" src="./pictures/products/product6.jpg"></img>
                             <p class="product-name">Бараа 6</p>
@@ -672,7 +720,7 @@
                         </article>
                     </a>
 
-                    <a href="product.html">
+                    <a href="saved.html">
                         <article class="product-box" id="group2">
                             <img alt="new arrival product 7" src="./pictures/products/product7.jpg"></img>
                             <p class="product-name">Бараа 7</p>
@@ -681,7 +729,7 @@
                         </article>
                     </a>
 
-                    <a href="product.html">
+                    <a href="saved.html">
                         <article class="product-box">
                             <img alt="new arrival product 8" src="./pictures/products/product8.jpg"></img>
                             <p class="product-name">Бараа 8</p>
@@ -690,7 +738,7 @@
                         </article>
                     </a>
 
-                    <a href="product.html">
+                    <a href="saved.html">
                         <article class="product-box">
                             <img alt="new arrival product 9" src="./pictures/products/product1.jpg"></img>
                             <p class="product-name">Бараа 9</p>
@@ -699,7 +747,7 @@
                         </article>
                     </a>
 
-                    <a href="product.html">
+                    <a href="saved.html">
                         <article class="product-box">
                             <img alt="new arrival product 10" src="./pictures/products/product2.jpg"></img>
                             <p class="product-name">Бараа 10</p>
@@ -708,7 +756,7 @@
                         </article>
                     </a>
 
-                    <a href="product.html">
+                    <a href="saved.html">
                         <article class="product-box">
                             <img alt="new arrival product 11" src="./pictures/products/product3.jpg"></img>
                             <p class="product-name">Бараа 11</p>
@@ -717,7 +765,7 @@
                         </article>
                     </a>
 
-                    <a href="product.html">
+                    <a href="saved.html">
                         <article class="product-box">
                             <img alt="new arrival product 12" src="./pictures/products/product4.jpg"></img>
                             <p class="product-name">Бараа 12</p>
@@ -750,17 +798,44 @@
 
     </main>
 
+    <footer>
+        <nav>
+            <section>
+                <h3>Холбоо барих</h3>
+                <ul>
+                    <li><a href="tel:+976 95573778">Утас: (+976) 95573778</a></li>
+                    <li><a href="mailto: nyambayar2014@gmail.com">И-мэйл: nyambayar2014@gmail.com</a></li>
+                    <li><a href="facebook.com">Facebook</a> </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Хаяг</h3>
+                <ul>
+                    <li>Сүхбаатар дүүрэг, 1-р хороо, Улаанбаатар хот, Монгол улс</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Тусламж</h3>
+                <ul>
+                    <li><a href="tel:+976 95573778">Холбоо барих</a></li>
+                    <li><a href="mailto: nyambayar2014@gmail.com">Гомдол гаргах</a></li>
+                    <li><a href="shopsignup.html">Борлуулагчаар бүртгүүлэх</li>
+                    <li><a href="mailto: nyambayar2014@gmail.com">Санал хүсэлт</a></li>
+                </ul>
+            </section>
+        </nav>
+    </footer>
 </body>
 
 <footer>
     <nav>
         <ul>
-            <li>Холбоо барих</li>
-            <li>Гомдол гаргах</li>
-            <li>Борлуулагчаар бүртгүүлэх</li>
-            <li>Санал хүсэлт</li>
-            <li></li>
-            <li></li>
+            <button>Холбоо барих</button>
+            <button>Гомдол гаргах</button>
+            <button>Борлуулагчаар бүртгүүлэх</button>
+            <button>Санал хүсэлт</button>
         </ul>
     </nav>
 </footer>

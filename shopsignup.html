@@ -2,123 +2,379 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" type="text/css" href="./global.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop sign Up</title>
+    <title>Бүртгүүлэх</title>
+    <link rel="icon" href="./pictures/site elements/explosion.ico" type="image/x-icon">
+    <style>
+        header {
+            padding-left: 2vw;
+            padding-right: 2vw;
+            padding-top: 3vh;
+            padding-bottom: 3vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background-color: hsl(98, 29%, 63%);
+            background-image: linear-gradient(to bottom, hsl(98, 29%, 70%), hsl(98, 29%, 63%), hsl(98, 29%, 63%), hsl(98, 29%, 40%));
+        }
+
+
+        .search-bar-wrapper input {
+            padding: 0.75em 1em;
+            padding-left: 2em;
+            width: 300px;
+            border: 2px solid hsl(0, 0%, 37%);
+            border-radius: 8px;
+            background-color: hsl(0, 0%, 100%);
+
+            outline: none;
+
+            &::placeholder {
+                font-weight: bold;
+                letter-spacing: 0.1em;
+            }
+        }
+
+        .search-bar-wrapper input:focus::placeholder {
+            opacity: 0;
+        }
+
+        .search-bar-wrapper button {
+            padding: 0.7em;
+            cursor: pointer;
+            border-radius: 0px 8px 8px 0px;
+            border: 2px solid hsl(0, 0%, 37%);
+            transform: translateX(-1em);
+            font-size: 13px;
+        }
+
+        .category-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .header-button {
+            padding: 0.7em;
+            padding-left: 2em;
+            padding-right: 2em;
+            cursor: pointer;
+            border-radius: 8px;
+            border: 2px solid hsl(0, 0%, 37%);
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            color: hsl(0, 0%, 20%);
+            background-color: hsl(0, 0%, 94%);
+            margin-left: 1vw;
+        }
+
+        .category-options {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid hsl(0, 0%, 87%);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            z-index: 1;
+        }
+
+        .category-options li {
+            border: 1px solid hsl(0, 0%, 87%);
+            padding: 10px;
+        }
+
+        .category-options li a {
+            text-decoration: none;
+            color: hsl(0, 0%, 20%);
+            display: block;
+        }
+
+        .category-options li:hover {
+            background-color: #f0f0f0;
+        }
+
+        .category-wrapper:hover .category-options {
+            display: block;
+        }
+
+        .logo {
+            max-width: 10em;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--main-color-1);
+        }
+
+        footer {
+            background-color: var(--main-color-4);
+            padding: 2vh 4vw;
+            display: grid;
+            grid-template-areas:
+                "section section section secion";
+
+        }
+
+        .form-container {
+            border-radius: 15px;
+            margin: 5% 20%;
+            padding: 1rem 2rem 4rem 2rem;
+            background-color: var(--main-color-2);
+            font-size: 1.5rem;
+            color: var(--main-color-4);
+
+            &>h1 {
+                font-weight: 800;
+                letter-spacing: 0.1rem;
+                margin-left: 10%;
+                font-size: 2.5rem;
+                text-wrap: wrap;
+            }
+
+            &>form {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                margin: 0 10%;
+
+                &>label {
+                    font-weight: 800;
+                    text-align: left;
+                    letter-spacing: 0.1rem;
+                }
+
+                &>input {
+                    width: 80%;
+                    border: 1px solid var(--main-color-4);
+                    border-radius: 15px;
+                    font-size: large;
+                    padding: 0.2rem 1rem 0.2rem 1rem;
+                    margin-bottom: 1rem;
+
+
+                    &:focus {
+                        border: 3px solid var(--main-color-4);
+                        outline: none;
+                        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+                    }
+                }
+
+                &>button {
+                    max-width: 10rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 2rem;
+
+                    background-color: var(--main-color-1);
+                    border: 6px solid var(--main-color-4);
+                    padding: 0.5rem;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    letter-spacing: 0.1rem;
+                    border-radius: 15px;
+                    color: var(--main-color-4);
+
+                    &:hover {
+                        background-color: var(--main-color-3);
+                        transition: background-color 0.5s;
+                    }
+
+                }
+
+                &>.terms-container {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    width: 80%;
+                    font-weight: 800;
+                    letter-spacing: 0.05rem;
+
+                    &>input[type="checkbox"] {
+                        width: 1.5em;
+                        height: 1.5em;
+                        border: 2px solid var(--main-color-4);
+                        border-radius: 5px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        position: relative;
+                    }
+                }
+            }
+        }
+
+            @media (max-width: 768px) {
+
+                .form-container {
+                    margin: 5% 5%;
+                    padding: 1.5rem;
+                    font-size: 1.2rem;
+
+                    &>h1 {
+                        font-size: 1.8rem;
+                    }
+                    
+                    &>form {
+                        max-width: 100%;
+                    }
+
+                    &>input {
+                        font-size: 1rem;
+                    }
+                }
+
+                .terms-container {
+                    font-size: 1rem;
+                    
+                    &>button {
+                        width: 100%;
+                        max-width: none;
+                        padding: 0.7rem;
+                    }
+                }
+
+            }
+
+    </style>
 </head>
 
 <body>
-
     <header>
         <div>
             <a href="index.html">
-                <image alt="logo"></image>
+                <img class="logo" src="./pictures/site elements/logo2.png" alt="logo">
             </a>
         </div>
 
-        <button>search</button>
-        <input type="text">
-        <label for="category">Ангилал</label>
-        <select id="category">
-            <option>Хувцас</option>
-            <option>Цахилгаан бараа</option>
-            <option>Гэр ахуйн бараа</option>
-            <select>
-                <a href="./login.html">
-                    <button>
-                        Log in
-                    </button>
-                </a>
-                <a href="./signup.html">
-                    <button>
-                        Sign up
-                    </button>
-                </a>
+        <div class="search-bar-wrapper">
+            <input type="text" placeholder="Бүтээгдэхүүн хайх">
+            <button>🔍</button>
+        </div>
+
+        <div class="category-wrapper">
+            <button class="header-button">Ангилал</button>
+            <ul class="category-options">
+                <li><a href="#">Цахилгаан бараа</a></li>
+                <li><a href="#">Хувцас</a></li>
+                <li><a href="#">Хүүхэд</a></li>
+                <li><a href="#">Гоёлын чимэглэл</a></li>
+                <li><a href="#">Гоо сайхан</a></li>
+                <li><a href="#">Бусад</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <a class="header-button" href="./login.html">
+                Log in
+            </a>
+            <a class="header-button" href="./signup.html">
+                Sign up
+            </a>
+        </div>
+
     </header>
 
     <main>
-        <h1>
-            Борлуулагчаар бүртгүүлэх
-        </h1>
-        <section>
-            <button>
-                <img alt="facebook">
-            </button>
-            <button>
-                <img alt="google">
-            </button>
-        </section>
-        <section>
-            <article>
-                <h2>
-                    Дэлгүүрийн нэр
-                </h2>
-                <input>
-            </article>
-            <article>
-                <h2>
-                    Email
-                </h2>
-                <input>
-            </article>
-            <article>
-                <h2>
-                    Утасны дугаар
-                </h2>
-                <input>
-                <input>
-            </article>
-            <h1>Хаяг</h1>
-            <article>
-                <h2>
-                    Нууц үг
-                </h2>
-                <input>
-            </article>
-            <article>
-                <h2>
-                    Нууц үг дахин оруулах
-                </h2>
-                <input>
-            </article>
-            <input type="checkbox">
-            <a>Үйлчилгээний нөхцөл</a>
-            <p>-тэй танилцах</p>
 
-            <article>
-                <button>Баталгаажуулах код авах</button>
-                <h2>
-                    Баталгаажуулах код оруулах
-                </h2>
-                <input>
-            </article>
-            <button>Бүртгүүлэх</button>
-        </section>
+        <div class="form-container">
 
-        <section>
-            <h3>
-                Хэрэв бүртгэл байгаа бол нэвтэрч орно уу?
-            </h3>
-            <button>
-                Нэвтрэх
-            </button>
-        </section>
+            <h1>
+                Борлуулагчаар бүртгүүлэх
+            </h1>
 
+            <form action="/login" method="post">
+                <label for="name">Дэлгүүрийн нэр</label>
+                <input type="email" id="email" name="email" required>
+
+                <h2>Хаяг</h2>
+
+                <label for="name">Хот</label>
+                <select class="cities">
+                    <option value="ulaanbaatar">Улаанбаатар</option>
+                    <option value="darhan">Дархан</option>
+                    <option value="erdenet">Эрдэнэт</option>
+                </select>
+
+                <label for="description">Дэлгэрэнгүй хаяг</label>
+                <input type="description" id="description" name="description" required>
+
+                <label for="map">Газрын зураг дээрх байршил</label>
+                <input type="map" id="map" name="map">
+
+                <label for="social-media1">Нийтийн сүлжээ 1</label>
+                <input type="social-media1" id="social-media1" name="social-media1">
+
+                <label for="social-media2">Нийтийн сүлжээ 2</label>
+                <input type="social-media2" id="social-media2" name="social-media2">
+
+
+                <h2>Бүртгэлийн мэдээлэл</h2>
+
+                <label for="email">И-мэйл хаяг</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone1">Утасны дугаар 1</label>
+                <input type="phone1" id="phone1" name="phone1" required>
+
+                <label for="phone2">Утасны дугаар 2</label>
+                <input type="phone2" id="phone2" name="phone2" required>
+
+                <label for="password">Нууц үг</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="password">Нууц үг давтаж оруулах</label>
+                <input type="password-repeat" id="password-repeat" name="password-repeat" required>
+
+                <div class="terms-container">
+                    <input type="checkbox" name="terms" required>
+                    <label for="terms"><a href="#">Үйлчилгээний нөхцөл</a> зөвшөөрөх</label>
+                </div>
+
+                <button type="submit">Бүртгүүлэх</button>
+            </form>
+        </div>
     </main>
 
     <footer>
         <nav>
-            <ul>
-                <li>Холбоо барих</li>
-                <li>Гомдол гаргах</li>
-                <li>Борлуулагчаар бүртгүүлэх</li>
-                <li>Санал хүсэлт</li>
-                <li></li>
-                <li></li>
-            </ul>
+            <section>
+                <h3>Холбоо барих</h3>
+                <ul>
+                    <li><a href="tel:+976 95573778">Утас: (+976) 95573778</a></li>
+                    <li><a href="mailto: nyambayar2014@gmail.com">И-мэйл: nyambayar2014@gmail.com</a></li>
+                    <li><a href="facebook.com">Facebook</a> </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Хаяг</h3>
+                <ul>
+                    <li>Сүхбаатар дүүрэг, 1-р хороо, Улаанбаатар хот, Монгол улс</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Тусламж</h3>
+                <ul>
+                    <li><a href="tel:+976 95573778">Холбоо барих</a></li>
+                    <li><a href="mailto: nyambayar2014@gmail.com">Гомдол гаргах</a></li>
+                    <li><a href="shopsignup.html">Борлуулагчаар бүртгүүлэх</li>
+                    <li><a href="mailto: nyambayar2014@gmail.com">Санал хүсэлт</a></li>
+                </ul>
+            </section>
         </nav>
     </footer>
-
 </body>
+
 
 </html>
