@@ -1,0 +1,254 @@
+:root {
+    --border-sm: 1px;
+    --border-md: 2px;
+    --border-lg: 3px;
+
+    --body-margin-vertical: 5vh;
+    --body-margin-horizontal: 10vmax;
+
+    --body-default-margin: var(--body-margin-vertical) var(--body-margin-horizontal) var(--body-margin-vertical) var(--body-margin-horizontal);
+
+    --border-radius-default: 12px;
+
+    --border-color-default: hsl(0%, 0%, 50%);
+
+    --shadow-default: 0px 10px 20px hsl(0, 0%, 80%);
+}
+
+body {
+    margin: var(--body-default-margin);
+    background-color: grey;
+}
+
+header, footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+}
+
+header {
+    background-color: #99bc85;
+    top: 0;
+    left: 0;
+}
+footer button, header button {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border: none;
+    padding: 10px 40px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-right: 100px;
+}
+footer {
+    bottom: 0;
+    left: 0;
+    gap: 10px;
+}
+
+main {
+    margin-top: 100px;
+    padding-bottom: 60px;
+}
+
+.product-details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: var(--border-radius-default);
+    box-shadow: var(--shadow-default);
+    padding: 100px;
+}
+
+.product-figure {
+    border: 2px solid white; 
+    padding: 10px;
+    background-color: white;
+    border-radius: var(--border-radius-default);
+}
+
+.product-details figure img {
+    border-radius: var(--border-radius-default);
+    max-width: 300px;
+}
+
+.product-info {
+    max-width: 600px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4b2b;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: var(--border-radius-default);
+    border: none;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.related-products {
+    margin-top: 40px;
+}
+
+.related-products h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-boxes-container {
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
+.product-boxes {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    transition: transform 0.5s ease;
+}
+
+.product-box {
+    background: white;
+    padding: 15px;
+    border-radius: var(--border-radius-default);
+    box-shadow: var(--shadow-default);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 200px;
+}
+
+.product-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.product-box img {
+    max-width: 100%;
+    border-radius: var(--border-radius-default);
+}
+
+.product-image-gallery {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.product-image-gallery .image-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.product-image-gallery .thumbnail {
+    width: 80px;
+    height: 60px;
+    cursor: pointer;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.product-image-gallery .thumbnail:hover {
+    transform: scale(1.1);
+}
+.related-products {
+    margin-top: 40px;
+}
+
+.related-products h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-boxes-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow-x: auto; /* Хажуу тийш гүйлгэх боломж */
+    scroll-snap-type: x mandatory; /* Тохируулга хийх */
+    padding: 20px 0;
+    position: relative;
+}
+
+.product-boxes {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    scroll-snap-align: start; /* Бүтээгдэхүүн бүрийг зохион байгуулж хөдлүүлэх */
+}
+
+.product-box {
+    background: white;
+    padding: 15px;
+    border-radius: var(--border-radius-default);
+    box-shadow: var(--shadow-default);
+    text-align: center;
+    min-width: 200px;
+}
+
+.product-box img {
+    max-width: 100%;
+    border-radius: var(--border-radius-default);
+}
+
+button {
+    background-color: #99bc85;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #80a56f;
+}
+
+button.move-left {
+    position: absolute;
+    left: 10px;
+}
+
+button.move-right {
+    position: absolute;
+    right: 10px;
+}
+
+/* Тохируулах товчнуудын шилжих чиглэл */
+.product-boxes-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.product-boxes-container::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 10px;
+}
+
+.product-boxes-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}

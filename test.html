@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="saved.css">
+    <style>
+        /* CSS - Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+
+        .header, .footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .logo {
+            width: 50px;
+        }
+
+        header nav button {
+            background-color: #99bc85;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .product-details {
+            display: flex;
+            gap: 20px;
+        }
+
+        .product-figure img {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .product-info {
+            max-width: 400px;
+        }
+
+        .product-info h1 {
+            margin-top: 0;
+        }
+
+        .price {
+            font-size: 1.5em;
+            color: #b12704;
+        }
+
+        .product-image-gallery {
+            margin-top: 30px;
+        }
+
+        .image-thumbnails img {
+            width: 100px;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .image-thumbnails img:hover {
+            transform: scale(1.1);
+        }
+
+        .like-button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: transparent;
+            border: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .like-button:hover {
+            opacity: 1;
+        }
+
+        .like-button.liked {
+            color: red;
+        }
+
+        button {
+            background-color: #99bc85;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Dark mode toggle button */
+        #theme-toggle {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #99bc85;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Product Box Style */
+        .product-box {
+            display: inline-block;
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .product-box img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+
+    <header>
+        <a href="index.html"><img src="https://picsum.photos/50/50" alt="Logo" class="logo"></a>
+        <nav>
+            <a href="index.html"><button>Буцах</button></a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- Product Details Section -->
+        <section class="product-details">
+            <figure class="product-figure">
+                <img id="main-product-image" src="https://picsum.photos/400/300" alt="Барааны зураг">
+                <figcaption>Барааны зураг</figcaption>
+            </figure>
+            <article class="product-info">
+                <h1>Барааны нэр</h1>
+                <p class="price">50,000₮</p>
+                <p>Барааны дэлгэрэнгүй мэдээлэл</p>
+                <button>Сагсанд нэмэх</button>
+            </article>
+        </section>
+
+        <!-- Product Image Gallery Section -->
+        <section class="product-image-gallery">
+            <h3>Барааны бусад зураг</h3>
+            <div class="image-thumbnails">
+                <div class="thumbnail-container">
+                    <img src="https://picsum.photos/400/300?1" alt="Талаас 1" class="thumbnail" onclick="changeImage('https://picsum.photos/400/300?1')">
+                    <button class="like-button" onclick="toggleLike(event)">❤️</button>
+                </div>
+                <div class="thumbnail-container">
+                    <img src="https://picsum.photos/400/300?2" alt="Талаас 2" class="thumbnail" onclick="changeImage('https://picsum.photos/400/300?2')">
+                    <button class="like-button" onclick="toggleLike(event)">❤️</button>
+                </div>
+                <div class="thumbnail-container">
+                    <img src="https://picsum.photos/400/300?3" alt="Талаас 3" class="thumbnail" onclick="changeImage('https://picsum.photos/400/300?3')">
+                    <button class="like-button" onclick="toggleLike(event)">❤️</button>
+                </div>
+                <div class="thumbnail-container">
+                    <img src="https://picsum.photos/400/300?4" alt="Талаас 4" class="thumbnail" onclick="changeImage('https://picsum.photos/400/300?4')">
+                    <button class="like-button" onclick="toggleLike(event)">❤️</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Дэлгүүрийн Веб</p>
+    </footer>
+
+    <script>
+        // Change main product image
+        function changeImage(imageUrl) {
+            document.getElementById('main-product-image').src = imageUrl;
+        }
+
+        // Toggle like on product images
+        function toggleLike(event) {
+            const button = event.target;
+            button.classList.toggle('liked');
+        }
+
+        // Dark Mode Toggle
+        function toggleTheme() {
+            const body = document.body;
+            const button = document.getElementById('theme-toggle');
+
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                button.textContent = 'Light Mode';
+            } else {
+                localStorage.setItem('theme', 'light');
+                button.textContent = 'Dark Mode';
+            }
+        }
+
+        // Check and apply saved theme preference
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            document.getElementById('theme-toggle').textContent = 'Light Mode';
+        }
+    </script>
+</body>
+</html>
