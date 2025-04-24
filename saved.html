@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details</title>
-    <link rel="stylesheet" href="saved.css">
+    <link rel="stylesheet" href="./css/saved.css">
 </head>
 <body>
 <input type="text" placeholder="Хайх..." />
@@ -20,27 +20,25 @@
 
     <main>
         <section class="product-details">
-            <h2>Өндөр үнэлгээтэй</h2>
-            <div class="product-group-top-rated">
-                <a class="no-underline" href="product.html">
-                    <article class="product-box float-on-hover">
-                        <img alt="new arrival product 1" src="../pictures/products/product1.jpg">
-                        <p class="product-name">Bose MX75830 OnEar чихэвч - Хар</p>
-                        <p class="product-rating">4.5⭐</p>
-                        <p class="product-desc">Headphone on yellow background</p>
-                        <p class="product-price">15000₮</p>
-                        <button class="hover-darken"><img src="../pictures/site elements/button_heart_empty.png"></button>
-                    </article>
-                </a>
+            <figure class="product-figure">
+                <img id="main-product-image" src="./pictures/products/product1.jpg" alt="Барааны зураг">
+                <figcaption>Барааны зураг</figcaption>
+            </figure>
+            <article class="product-info">
+                <h1>Барааны нэр</h1>
+                <p class="price">50,000₮</p>
+                <p>baraanii delgerengui medeelel</p>
+                <button>Сагсанд нэмэх</button>
+            </article>
         </section>
 
         <section class="product-image-gallery">
             <h3>Барааны бусад зураг</h3>
             <div class="image-thumbnails">
-                <img src="https://picsum.photos/400/300?1" alt="Талаас 1" class="thumbnail" onclick="changeImage('https://picsum.photos/400/300?1')">
-                <img src="https://picsum.photos/400/300?2" alt="Талаас 2" class="thumbnail" onclick="changeImage('https://picsum.photos/400/300?2')">
-                <img src="https://picsum.photos/400/300?3" alt="Талаас 3" class="thumbnail" onclick="changeImage('https://picsum.photos/400/300?3')">
-                <img src="https://picsum.photos/400/300?4" alt="Талаас 4" class="thumbnail" onclick="changeImage('https://picsum.photos/400/300?4')">
+                <img src="./pictures/products/product1.jpg" alt="Талаас 1" class="thumbnail" onclick="changeImage('./pictures/products/product1.jpg')">
+                <img src="./pictures/products/product2.jpg" alt="Талаас 2" class="thumbnail" onclick="changeImage('./pictures/products/product2.jpg')">
+                <img src="./pictures/products/product3.jpg" alt="Талаас 3" class="thumbnail" onclick="changeImage('./pictures/products/product3.jpg')">
+                <img src="./pictures/products/product4.jpg" alt="Талаас 4" class="thumbnail" onclick="changeImage('./pictures/products/product4.jpg')">
             </div>
         </section>
 
@@ -50,31 +48,31 @@
                 <ul class="product-boxes">
                     <a href="saved.html">
                         <li class="product-box">
-                            <img src="https://picsum.photos/200/150" alt="Бараа 1">
+                            <img src="./pictures/products/product1.jpg" alt="Бараа 1">
                             <p>Бараа 1 - 45,000₮</p>
                         </li>
                     </a>
                     <a href="saved.html">
                         <li class="product-box">
-                            <img src="https://picsum.photos/200/150" alt="Бараа 2">
+                            <img src="./pictures/products/product2.jpg" alt="Бараа 2">
                             <p>Бараа 2 - 30,000₮</p>
                         </li>
                     </a>
                     <a href="saved.html">
                         <li class="product-box">
-                            <img src="https://picsum.photos/200/150" alt="Бараа 3">
+                            <img src="./pictures/products/product3.jpg" alt="Бараа 3">
                             <p>Бараа 3 - 25,000₮</p>
                         </li>
                     </a>
                     <a href="saved.html">
                         <li class="product-box">
-                            <img src="https://picsum.photos/200/150" alt="Бараа 4">
+                            <img src="./pictures/products/product4.jpg" alt="Бараа 4">
                             <p>Бараа 4 - 60,000₮</p>
                         </li>
                     </a>
                     <a href="saved.html">
                         <li class="product-box">
-                            <img src="https://picsum.photos/200/150" alt="Бараа 1">
+                            <img src="./pictures/products/product5.jpg" alt="Бараа 1">
                             <p>Бараа 1 - 45,000₮</p>
                         </li>
                     </a>
