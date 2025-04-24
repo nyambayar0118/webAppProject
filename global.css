@@ -19,7 +19,6 @@ footer {
     margin: 0;
 }
 
-<<<<<<< HEAD
 footer button, header button {
     background: linear-gradient(45deg, #ff416c, #ff4b2b);
     border: none;
@@ -50,14 +49,6 @@ footer button:hover, header button:hover {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-=======
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-body a {
-    text-decoration: none;
->>>>>>> 2d564ab2d75c7dd4d0dd3e1fab47ac707e328b7e
 }
 
 .product-box {
