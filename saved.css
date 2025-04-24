@@ -59,7 +59,6 @@ footer {
 main {
     margin-top: 100px;
     padding-bottom: 60px;
-    
 }
 
 .product-details {
@@ -117,12 +116,17 @@ button:hover {
     margin-bottom: 20px;
 }
 
+.product-boxes-container {
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
 .product-boxes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
     gap: 20px;
-    padding: 0;
     list-style: none;
+    padding: 0;
+    transition: transform 0.5s ease;
 }
 
 .product-box {
@@ -132,6 +136,7 @@ button:hover {
     box-shadow: var(--shadow-default);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 200px;
 }
 
 .product-box:hover {
@@ -166,4 +171,84 @@ button:hover {
 
 .product-image-gallery .thumbnail:hover {
     transform: scale(1.1);
+}
+.related-products {
+    margin-top: 40px;
+}
+
+.related-products h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-boxes-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow-x: auto; /* Хажуу тийш гүйлгэх боломж */
+    scroll-snap-type: x mandatory; /* Тохируулга хийх */
+    padding: 20px 0;
+    position: relative;
+}
+
+.product-boxes {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    scroll-snap-align: start; /* Бүтээгдэхүүн бүрийг зохион байгуулж хөдлүүлэх */
+}
+
+.product-box {
+    background: white;
+    padding: 15px;
+    border-radius: var(--border-radius-default);
+    box-shadow: var(--shadow-default);
+    text-align: center;
+    min-width: 200px;
+}
+
+.product-box img {
+    max-width: 100%;
+    border-radius: var(--border-radius-default);
+}
+
+button {
+    background-color: #99bc85;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #80a56f;
+}
+
+button.move-left {
+    position: absolute;
+    left: 10px;
+}
+
+button.move-right {
+    position: absolute;
+    right: 10px;
+}
+
+/* Тохируулах товчнуудын шилжих чиглэл */
+.product-boxes-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.product-boxes-container::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 10px;
+}
+
+.product-boxes-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
 }
