@@ -34,11 +34,19 @@ export async function sortByPrice(order = "asc") {
 }
 
 export async function sortByRating(order = "desc") {
-    const products = await fetchProducts();
-    return products.sort((a, b) => {
-      const ra = parseFloat(a.rating);
-      const rb = parseFloat(b.rating);
-      return order === "asc" ? ra - rb : rb - ra;
-    });
-  }
-  
+  const products = await fetchProducts();
+  return products.sort((a, b) => {
+    const ra = parseFloat(a.rating);
+    const rb = parseFloat(b.rating);
+    return order === "asc" ? ra - rb : rb - ra;
+  });
+}
+
+export async function sortByLatest(order = "latest") {
+  const products = await fetchProducts();
+  return products.sort((a, b) => {
+    const ida = parseInt(a.id.replace("p", ""));
+    const idb = parseInt(b.id.replace("p", ""));
+    return order === "latest" ? idb - ida : ida - idb;
+  });
+}
