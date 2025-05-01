@@ -306,6 +306,15 @@ h2 {
     text-align: center;
     border-bottom: 1px solid var(--main-color-4);
 }
+body[data-theme="light"] {
+    background-color: white;
+    color: black;
+}
+
+body[data-theme="dark"] {
+    background-color: black;
+    color: white;
+}
 
 body.dark-mode {
     background-color: black; 
