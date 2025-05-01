@@ -6,7 +6,8 @@
       "name": "Bose MX75830 OnEar чихэвч - Хар",
       "rating": "4.5",
       "desc": "Headphone on yellow background",
-      "price": "15000"
+      "price": "15000",
+      "type": "electronic"
     },
     {
       "id": "p0002",
@@ -15,7 +16,8 @@
       "name": "Nike Air Max 1",
       "rating": "4.8",
       "desc": "Noise-cancelling wireless headphones",
-      "price": "32000"
+      "price": "32000",
+      "type": "electronic"
     },
     {
       "id": "p0003",
@@ -24,7 +26,8 @@
       "name": "RayBan P Black",
       "rating": "3.9",
       "desc": "Women's 100% black UV filtering sunglasses",
-      "price": "67000"
+      "price": "67000",
+      "type": "wearables"
     },
     {
       "id": "p0004",
@@ -33,7 +36,8 @@
       "name": "Women's leather shoe",
       "rating": "2.4",
       "desc": "Women's cyan leather shoe, size 38",
-      "price": "57000"
+      "price": "57000",
+      "type": "clothing"
     },
     {
       "id": "p0005",
@@ -42,7 +46,8 @@
       "name": "Taylor Swift Folklore Vinyl",
       "rating": "5.0",
       "desc": "Taylor Swift Folklore Vinyl, Sealed",
-      "price": "100000"
+      "price": "100000",
+      "type": "other"
     },
     {
       "id": "p0006",
@@ -51,7 +56,8 @@
       "name": "Love me hard and soft vinyl",
       "rating": "4.8",
       "desc": "Love me hard and soft Vinyl, Sealed",
-      "price": "76000"
+      "price": "76000",
+      "type": "other"
     },
     {
       "id": "p0007",
@@ -60,7 +66,8 @@
       "name": "Stanley Green WaterBottle",
       "rating": "3.0",
       "desc": "Stanley 1L Standard Green WaterBottle",
-      "price": "20000"
+      "price": "20000",
+      "type": "other"
     },
     {
       "id": "p0008",
@@ -69,7 +76,8 @@
       "name": "Samsung Galaxy Watch 6",
       "rating": "4.7",
       "desc": "Samsung Galaxy Watch 6, Sealed, White Band, Classic",
-      "price": "1200000"
+      "price": "1200000",
+      "type": "electronic"
     },
     {
       "id": "p0009",
@@ -78,7 +86,8 @@
       "name": "One Step 2 Polaroid Camera",
       "rating": "4.1",
       "desc": "One Step 2 Polaroid Camera, White, Lens included",
-      "price": "92000"
+      "price": "92000",
+      "type": "electronic kid"
     },
     {
       "id": "p0010",
@@ -87,7 +96,8 @@
       "name": "Chanel No5 Perfume",
       "rating": "3.5",
       "desc": "Chanel No5 Perfume, Eau De Parfum",
-      "price": "69000"
+      "price": "69000",
+      "type": "beauty"
     }
   ]
   

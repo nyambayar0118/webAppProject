@@ -50,3 +50,17 @@ export async function sortByLatest(order = "latest") {
     return order === "latest" ? idb - ida : ida - idb;
   });
 }
+
+export async function getCartCount() {
+  const savedProducts = localStorage.getItem("saved");
+
+  if (savedProducts) {
+    const products = JSON.parse(savedProducts);
+    const count = products.length;
+    console.log("Cart count:", count);
+    return count;
+  }
+
+  console.log("Cart count: 0");
+  return 0;
+}
