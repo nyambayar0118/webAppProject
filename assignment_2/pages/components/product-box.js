@@ -8,7 +8,24 @@ export class Product extends HTMLElement {
     if (this._data) {
       this.render(this._data);
     }
+
+    window.addEventListener("product-save-toggled", this.handleToggle);
   }
+
+  disconnectedCallback() {
+    window.removeEventListener("product-save-toggled", this.handleToggle);
+  }
+
+  handleToggle = (e) => {
+    if (!this._data || this._data.id !== e.detail.id) return;
+
+    const heartImg = this.shadowRoot.getElementById("heart-img");
+    if (heartImg) {
+      heartImg.src = e.detail.shouldSave
+        ? "../pictures/site elements/button_heart_filled.png"
+        : "../pictures/site elements/button_heart_empty.png";
+    }
+  };
 
   set data(pdata) {
     this._data = pdata;
@@ -168,6 +185,12 @@ export class Product extends HTMLElement {
       savedItems = savedItems.filter((item) => item !== id);
     }
     localStorage.setItem("saved", JSON.stringify(savedItems));
+
+    window.dispatchEvent(
+      new CustomEvent("product-save-toggled", {
+        detail: { id, shouldSave },
+      })
+    );
   }
 }
 
