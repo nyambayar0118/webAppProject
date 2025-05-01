@@ -307,6 +307,48 @@ h2 {
     border-bottom: 1px solid var(--main-color-4);
 }
 
+.category-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.category-group article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    height: 200px;
+}
+.category-group div {
+    background-color: var(--main-color-3);
+    border-radius: 75px;
+    width: 80%;
+    height: 75%;
+    fill: hsl(0, 0%, 40%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &>svg {
+        width: 60%;
+        height: 60%;
+    }
+
+    &:hover {
+        border: 4px solid var(--main-color-4);
+        transition: border 0.5s;
+    }
+}
+.category-group p {
+    height: 25%;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
 /* 
 footer {

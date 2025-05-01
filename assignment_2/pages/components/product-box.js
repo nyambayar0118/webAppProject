@@ -40,71 +40,72 @@ export class Product extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
     <style>
-    .no-underline {
-    text-decoration: none;
-    }
-  .product-box {
-    display: grid;
-    grid-template-columns: 80% 20%;
-    grid-template-rows: 6fr 1.2fr auto 1fr;
-    grid-template-areas:
+      .no-underline {
+        text-decoration: none;
+      }
+
+      .product-box {
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 6fr 1.2fr auto 1fr;
+        grid-template-areas:
         "img img"
         "title rating"
         "desc desc"
         "price save";
-    height: 350px;
-    aspect-ratio: 5/7;
-    border-radius: 12px;
-    overflow: hidden;
-  }
+        height: 350px;
+        aspect-ratio: 5/7;
+        border-radius: 12px;
+        overflow: hidden;
+      }
 
-  .product-box > img {
-    grid-area: img;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-  }
+      .product-box > img {
+        grid-area: img;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      }
 
-  .product-box > .product-name {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    grid-area: title;
-    margin: 0 0.5rem;
-    align-self: center;
-    color: black;
-    font-weight: 600;
-  }
+      .product-box > .product-name {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        grid-area: title;
+        margin: 0 0.5rem;
+        align-self: center;
+        color: black;
+        font-weight: 600;
+      }
 
-  .product-box > .product-rating {
-    grid-area: rating;
-    text-align: center;
-    margin: 0 0.2rem 0 0;
-    align-self: center;
-    justify-self: center;
-    color: black;
-  }
+      .product-box > .product-rating {
+        grid-area: rating;
+        text-align: center;
+        margin: 0 0.2rem 0 0;
+        align-self: center;
+        justify-self: center;
+        color: black;
+      }
 
-  .product-box > .product-desc {
-    grid-area: desc;
-    overflow: hidden;
-    margin: 0 0.5rem;
-    color: grey;
-    font-size: 0.8rem;
-  }
+      .product-box > .product-desc {
+        grid-area: desc;
+        overflow: hidden;
+        margin: 0 0.5rem;
+        color: grey;
+        font-size: 0.8rem;
+      }
 
-  .product-box > .product-price {
-    grid-area: price;
-    margin: 0.3rem 0 0.3rem 0.5rem;
-    font-size: 1.5rem;
-    color: black;
-    font-weight: 600;
-    letter-spacing: 0.05rem;
-  }
+      .product-box > .product-price {
+        grid-area: price;
+        margin: 0.3rem 0 0.3rem 0.5rem;
+        font-size: 1.5rem;
+        color: black;
+        font-weight: 600;
+        letter-spacing: 0.05rem;
+      }
 
-  .product-box > button {
+      .product-box > button {
     padding: 0;
     align-self: center;
     justify-self: center;

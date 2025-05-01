@@ -57,10 +57,10 @@ export async function getCartCount() {
   if (savedProducts) {
     const products = JSON.parse(savedProducts);
     const count = products.length;
-    console.log("Cart count:", count);
+    // console.log("Cart count:", count);
     return count;
   }
 
-  console.log("Cart count: 0");
+  // console.log("Cart count: 0");
   return 0;
 }
