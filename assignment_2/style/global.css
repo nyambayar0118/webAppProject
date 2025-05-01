@@ -307,6 +307,19 @@ h2 {
     border-bottom: 1px solid var(--main-color-4);
 }
 
+body.dark-mode {
+    background-color: black; 
+    color: white;            
+}
+
+body.dark-mode a {
+    color: white;               
+}
+
+body.dark-mode svg {
+    fill: white;               
+    stroke: white;
+}
 
 /* 
 footer {
