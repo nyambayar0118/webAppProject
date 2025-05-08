@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./global.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нэвтрэх</title>
+    <link rel="icon" href="./pictures/site elements/explosion.ico" type="image/x-icon">
+    <style>
+        header {
+            padding-left: 2vw;
+            padding-right: 2vw;
+            padding-top: 3vh;
+            padding-bottom: 3vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background-color: hsl(98, 29%, 63%);
+            background-image: linear-gradient(to bottom, hsl(98, 29%, 70%), hsl(98, 29%, 63%), hsl(98, 29%, 63%), hsl(98, 29%, 40%));
+        }
+
+
+        .search-bar-wrapper input {
+            padding: 0.75em 1em;
+            padding-left: 2em;
+            width: 300px;
+            border: 2px solid hsl(0, 0%, 37%);
+            border-radius: 8px;
+            background-color: hsl(0, 0%, 100%);
+
+            outline: none;
+
+            &::placeholder {
+                font-weight: bold;
+                letter-spacing: 0.1em;
+            }
+        }
+
+        .search-bar-wrapper input:focus::placeholder {
+            opacity: 0;
+        }
+
+        .search-bar-wrapper button {
+            padding: 0.7em;
+            cursor: pointer;
+            border-radius: 0px 8px 8px 0px;
+            border: 2px solid hsl(0, 0%, 37%);
+            transform: translateX(-1em);
+            font-size: 13px;
+        }
+
+        .category-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .header-button {
+            padding: 0.7em;
+            padding-left: 2em;
+            padding-right: 2em;
+            cursor: pointer;
+            border-radius: 8px;
+            border: 2px solid hsl(0, 0%, 37%);
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            color: hsl(0, 0%, 20%);
+            background-color: hsl(0, 0%, 94%);
+            margin-left: 1vw;
+        }
+
+        .category-options {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid hsl(0, 0%, 87%);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            z-index: 1;
+        }
+
+        .category-options li {
+            border: 1px solid hsl(0, 0%, 87%);
+            padding: 10px;
+        }
+
+        .category-options li a {
+            text-decoration: none;
+            color: hsl(0, 0%, 20%);
+            display: block;
+        }
+
+        .category-options li:hover {
+            background-color: #f0f0f0;
+        }
+
+        .category-wrapper:hover .category-options {
+            display: block;
+        }
+
+        .logo {
+            max-width: 10em;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--main-color-1);
+        }
+
+        footer {
+            background-color: var(--main-color-4);
+            padding: 2vh 4vw;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 багана */
+            gap: 30px; /* Зайг өргөсгөсөн */
+            text-align: left;
+            color: #fff;
+        }
+
+        footer h3 {
+            margin-bottom: 1rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer ul li {
+            margin: 0.5rem 0;
+        }
+
+        footer ul li a {
+            color: hsl(0, 0%, 100%);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer ul li a:hover {
+            color: hsl(98, 29%, 70%);
+        }
+
+        /* Responsive дизайн */
+        @media (max-width: 1024px) {
+            footer {
+                grid-template-columns: repeat(2, 1fr); /* Хэрэв дэлгэц жижиг бол хоёр багана */
+                padding: 3vh 2vw;
+            }
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                grid-template-columns: 1fr; /* Хэрэв маш жижиг дэлгэц бол нэг багана */
+            }
+        }
+
+        .form-container {
+            border-radius: 15px;
+            margin: 1rem 15rem;
+            padding: 1rem 2rem 4rem 2rem;
+            background-color: var(--main-color-2);
+            font-size: 1.5rem;
+            color: var(--main-color-4);
+
+            &>h1 {
+                font-weight: 800;
+                letter-spacing: 0.1rem;
+                margin-left: 5rem;
+            }
+
+            &>form {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                margin: 0 5rem;
+
+                &>label {
+                    font-weight: 800;
+                    text-align: left;
+                    letter-spacing: 0.1rem;
+                }
+
+                &>input {
+                    width: 80%;
+                    border: 1px solid var(--main-color-4);
+                    border-radius: 15px;
+                    font-size: large;
+                    padding: 0.2rem 1rem 0.2rem 1rem;
+                    margin-bottom: 1rem;
+
+
+                    &:focus {
+                        border: 3px solid var(--main-color-4);
+                        outline: none;
+                        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+                    }
+                }
+
+                &>button {
+                    max-width: 10rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 2rem;
+
+                    background-color: var(--main-color-1);
+                    border: 6px solid var(--main-color-4);
+                    padding: 0.5rem;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    letter-spacing: 0.1rem;
+                    border-radius: 15px;
+                    color: var(--main-color-4);
+
+                    &:hover {
+                        background-color: var(--main-color-3);
+                        transition: background-color 0.5s;
+                    }
+
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="index.html">
+                <img class="logo" src="./pictures/site elements/logo2.png" alt="logo">
+            </a>
+        </div>
+
+        <div class="search-bar-wrapper">
+            <input type="text" placeholder="Бүтээгдэхүүн хайх">
+            <button>🔍</button>
+        </div>
+
+        <div class="category-wrapper">
+            <button class="header-button">Ангилал</button>
+            <ul class="category-options">
+                <li><a href="#">Цахилгаан бараа</a></li>
+                <li><a href="#">Хувцас</a></li>
+                <li><a href="#">Хүүхэд</a></li>
+                <li><a href="#">Гоёлын чимэглэл</a></li>
+                <li><a href="#">Гоо сайхан</a></li>
+                <li><a href="#">Бусад</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <a class="header-button" href="./login.html">
+                Log in
+            </a>
+            <a class="header-button" href="./signup.html">
+                Sign up
+            </a>
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class="form-container">
+
+            <h1>
+                Нэвтрэх
+            </h1>
+
+            <form action="/login" method="post">
+                <label for="email">И-мэйл хаяг</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Нууц үг</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Нэвтрэх</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <nav>
+            <section>
+                <h3>Холбоо барих</h3>
+                <ul>
+                    <li><a href="tel:+976 95573778">Утас: (+976) 95573778</a></li>
+                    <li><a href="mailto: nyambayar2014@gmail.com">И-мэйл: nyambayar2014@gmail.com erhenn090@gmail.com</a></li>
+                    <li><a href="facebook.com">Facebook</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Хаяг</h3>
+                <ul>
+                    <li>Сүхбаатар дүүрэг, 1-р хороо, Улаанбаатар хот, Монгол улс</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Тусламж</h3>
+                <ul>
+                    <li><a href="tel:+976 95573778">Холбоо барих</a></li>
+                    <li><a href="mailto: nyambayar2014@gmail.com">Гомдол гаргах</a></li>
+                    <li><a href="shopsignup.html">Борлуулагчаар бүртгүүлэх</a></li>
+                    <li><a href="mailto: nyambayar2014@gmail.com">Санал хүсэлт</a></li>
+                </ul>
+            </section>
+        </nav>
+    </footer>
+</body>
+
+
+</html>

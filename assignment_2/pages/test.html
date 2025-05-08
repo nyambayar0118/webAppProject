@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Page</title>
+  <link rel="stylesheet" type="text/css" href="../style/global.css">
+</head>
+<body>
+  <product-box></product-box>
+
+  <!-- Import the component -->
+  <script type="module">
+    import { Product } from './components/product.js';
+
+    // Example product data
+    const product = {
+      id: "product1",
+      link: "product.html",
+      imgSrc: "../pictures/products/product1.jpg",
+      imgAlt: "new arrival product 1",
+      name: "Bose MX75830 OnEar чихэвч - Хар",
+      rating: "4.5",
+      desc: "Headphone on yellow background",
+      price: "15000"
+    };
+
+    // Wait for custom element registration
+    window.customElements.whenDefined('product-box').then(() => {
+      const card = document.querySelector("product-box");
+      card.data = product;
+    });
+  </script>
+</body>
+</html>
