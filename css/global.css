@@ -1,0 +1,137 @@
+:root {
+    --main-color-1: hsl(33, 67%, 94%);
+    --main-color-2: hsl(34, 64%, 98%);
+    --main-color-3: hsl(136, 26%, 92%);
+    --main-color-4: hsl(98, 29%, 63%);
+
+    --text-color-light: hsl(98, 29%, 63%);
+    --text-color-dark: hsl(0, 0%, 100%);
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
+    gap: 10px;
+    margin: 0;
+}
+
+footer button, header button {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+footer button:hover, header button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+}
+
+.header-button {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.product-box {
+    background-color: var(--main-color-1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 15rem;
+    height: 20rem;
+    margin: auto;
+    text-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.product-box img {
+    width: 100%;
+    height: 15rem;
+    max-height: 50%;
+    object-fit: cover;
+    border-bottom: 3px solid var(--main-color-3);
+}
+
+.product-name {
+    font-size: 20px;
+    color: var(--text-color-light);
+    margin: 10px 0;
+}
+
+.product-price {
+    color: var(--text-color-light);
+    font-size: 22px;
+}
+
+.product-box>button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: var(--main-color-4);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 0 0 12px 12px;
+    transition: background-color 0.3s;
+}
+
+.product-box>button:hover {
+    background-color: hsl(0, 0%, 30%);
+}
+
+.basket svg {
+    fill: black;
+    stroke: black;
+}
+
+@media (prefers-color-scheme: dark) {
+    .basket svg {
+        fill: white;
+        stroke: white;
+    }
+}
+body.dark-mode {
+    background-color: #121212;  
+    color: white;               
+}
+
+body.dark-mode a {
+    color: white;               
+}
+
+body.dark-mode svg {
+    fill: white;                
+    stroke: white;
+}
+
+

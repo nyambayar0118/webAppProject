@@ -285,7 +285,8 @@ main img {
 
 .float-on-hover {
     transition: box-shadow 0.3s,
-                transform 0.3s;
+        transform 0.3s;
+
     &:hover {
         transform: translateY(-5px);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
@@ -307,12 +308,37 @@ h2 {
     border-bottom: 1px solid var(--main-color-4);
 }
 
+body[data-theme="light"] {
+    background-color: white;
+    color: black;
+}
+
+body[data-theme="dark"] {
+    background-color: black;
+    color: white;
+}
+
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+body.dark-mode a {
+    color: white;
+}
+
+body.dark-mode svg {
+    fill: white;
+    stroke: white;
+}
+
 .category-group {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
+
 .category-group article {
     display: flex;
     flex-direction: column;
@@ -320,6 +346,7 @@ h2 {
     width: 150px;
     height: 200px;
 }
+
 .category-group div {
     background-color: var(--main-color-3);
     border-radius: 75px;
@@ -340,6 +367,7 @@ h2 {
         transition: border 0.5s;
     }
 }
+
 .category-group p {
     height: 25%;
     font-weight: bold;

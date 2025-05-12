@@ -1,0 +1,123 @@
+:root {
+    --border-sm: 1px;
+    --border-md: 2px;
+    --border-lg: 3px;
+
+    --body-margin-vertical: 5vh;
+    --body-margin-horizontal: 10vmax;
+
+    --body-default-margin: var(--body-margin-vertical) var(--body-margin-horizontal) var(--body-margin-vertical) var(--body-margin-horizontal);
+
+    --border-radius-default: 12px;
+
+    --border-color-default: hsl(0%, 0%, 50%);
+
+    --shadow-default: 0px 10px 20px hsl(0, 0%, 80%);
+}
+
+body {
+    margin: var(--body-default-margin);
+    background-color: grey;
+}
+
+header, footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+}
+
+header {
+    top: 0;
+    left: 0;
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    gap: 10px;
+}
+
+main {
+    margin-top: 80px;
+    padding-bottom: 60px;
+}
+
+.product-details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: var(--border-radius-default);
+    box-shadow: var(--shadow-default);
+}
+
+.product-details figure img {
+    border-radius: var(--border-radius-default);
+    max-width: 300px;
+}
+
+.product-info {
+    max-width: 600px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4b2b;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: var(--border-radius-default);
+    border: none;
+    background: #007bff;
+    color: white;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.related-products {
+    margin-top: 40px;
+}
+
+.related-products h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.product-box {
+    background: white;
+    padding: 15px;
+    border-radius: var(--border-radius-default);
+    box-shadow: var(--shadow-default);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.product-box img {
+    max-width: 100%;
+    border-radius: var(--border-radius-default);
+}

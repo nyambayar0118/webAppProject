@@ -1,323 +1,169 @@
 <!DOCTYPE html>
 <html lang="mn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop</title>
-    <link rel="stylesheet" href="./css/shop.css">
-    
-<<<<<<< HEAD
-<style>
-    :root {
-        --border-sm: 1px;
-        --border-md: 2px;
-        --border-lg: 3px;
+    <title>Big Bang MN - Дэлгүүр</title>
+    <!-- ЗӨВ ЗАМТАЙ CSS -->
+    <link rel="stylesheet" href="assignment_1/css/global.css">
+    <link rel="icon" href="redesign/pictures/site elements/explosion.ico" type="image/x-icon">
+</head>
 
-        --body-margin-vertical: 5vh;
-        --body-margin-horizontal: 10vmax;
-
-        --body-default-margin: var(--body-margin-vertical) var(--body-margin-horizontal) var(--body-margin-vertical) var(--body-margin-horizontal);
-
-        --border-radius-default: 12px;
-
-        --border-color-default: hsl(0%, 0%, 50%);
-
-        --shadow-default: 0px 10px 20px hsl(0, 0%, 80%);
-    }
-
-
-
-    header {
-        padding-left: 2vw;
-        padding-right: 2vw;
-        padding-top: 3vh;
-        padding-bottom: 3vh;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        background-color: hsl(98, 29%, 63%);
-        background-image: linear-gradient(to bottom, hsl(98, 29%, 63%) hsl(98, 29%, 63%),hsl(98, 29%, 63%) hsl(98, 29%, 63%));
-    }
-
-
-    .search-bar-wrapper input {
-        padding: 0.75em 1em;
-        padding-left: 2em;
-        width: 300px;
-        border: 2px solid hsl(0, 0%, 37%);
-        border-radius: 8px;
-        background-color: hsl(0, 0%, 100%);
-
-        outline: none;
-
-        &::placeholder {
-            font-weight: bold;
-            letter-spacing: 0.1em;
-        }
-    }
-
-    .search-bar-wrapper input:focus::placeholder {
-        opacity: 0;
-    }
-
-    .search-bar-wrapper button {
-        padding: 0.7em;
-        cursor: pointer;
-        border-radius: 0px 8px 8px 0px;
-        border: 2px solid hsl(0, 0%, 37%);
-        transform: translateX(-1em);
-        font-size: 13px;
-    }
-
-    .category-wrapper {
-        position: relative;
-        display: inline-block;
-    }
-
-    .header-button {
-        padding: 0.7em;
-        padding-left: 2em;
-        padding-right: 2em;
-        cursor: pointer;
-        border-radius: 8px;
-        border: 2px solid hsl(0, 0%, 37%);
-        font-size: 13px;
-        font-weight: bold;
-        letter-spacing: 0.1em;
-        text-decoration: none;
-        color: hsl(0, 0%, 20%);
-        background-color: hsl(0, 0%, 94%);
-        margin-left: 1vw;
-    }
-
-    .category-options {
-        display: none;
-        position: absolute;
-        background-color: white;
-        border: 1px solid hsl(0, 0%, 87%);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        width: 200px;
-        z-index: 1;
-    }
-
-    .category-options li {
-        border: 1px solid hsl(0, 0%, 87%);
-        padding: 10px;
-    }
-
-    .category-options li a {
-        text-decoration: none;
-        color: hsl(0, 0%, 20%);
-        display: block;
-    }
-
-    .category-options li:hover {
-        background-color: #f0f0f0;
-    }
-
-    .category-wrapper:hover .category-options {
-        display: block;
-    }
-
-    body {
-        margin: 0;
-        background-color: hsl(33, 67%, 94%);
-    }        .shop-info {
-=======
+<body class="no-margin">
     <style>
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            position: relative;
-            z-index: 10;
-        }
-        footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            position: relative;
-            z-index: 10;
-            gap: 10px;
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #f9f9f9, #eef7ee);
+            color: #222;
             margin: 0;
         }
-        footer button, header button {
-            background: linear-gradient(45deg, #ff416c, #ff4b2b);
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+        .hero-banner {
+            text-align: center;
+            padding: 3rem 1rem;
+            background-color: #c6e5c3;
+            color: #1b3b0f;
+            border-radius: 10px;
+            margin: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
 
-        footer button:hover, header button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-            background: linear-gradient(45deg, #ff4b2b, #ff416c);
+        .featured-products {
+            padding: 2rem;
         }
-        .shop-info {
->>>>>>> 2f73b309c2cbbf8aa52701a9ba96c3d2bb9ad341
+
+        .featured-products h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-grid {
             display: flex;
-            align-items: center;
-            gap: 20px;
-            background: white;
-            padding: 20px;
-            border-radius: var(--border-radius-default);
-            box-shadow: var(--shadow-default);
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
-        .shop-info figure img {
-            border-radius: var(--border-radius-default);
-        }
-
-        .featured-products ul {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            list-style: none;
-            padding: 0;
-        }
-
-        .featured-products li {
-            background: white;
-            padding: 10px;
-            border-radius: var(--border-radius-default);
-            box-shadow: var(--shadow-default);
+        .product-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 1rem;
+            width: 200px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
         }
 
-        aside {
-            margin-top: 20px;
-            padding: 10px;
-            background: white;
-            border-radius: var(--border-radius-default);
-            box-shadow: var(--shadow-default);
+        .product-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
-        .reviews, .leave-review {
-            margin-top: 20px;
-            padding: 10px;
-            background: white;
-            border-radius: var(--border-radius-default);
-            box-shadow: var(--shadow-default);
-        }
-
-        textarea {
+        .product-card img {
             width: 100%;
-            height: 100px;
-            padding: 10px;
-            border-radius: var(--border-radius-default);
-            border: var(--border-sm) solid var(--border-color-default);
+            border-radius: 8px;
         }
 
-        button {
-            cursor: pointer;
-            padding: 10px 15px;
-            border-radius: var(--border-radius-default);
-            border: none;
-            background: #007bff;
-            color: white;
+        .product-card .price {
+            color: #1e7226;
+            font-weight: bold;
+            margin: 0.5rem 0;
         }
 
-        button:hover {
-            background: #0056b3;
+        .store-map {
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        .map-container {
+            max-width: 800px;
+            margin: auto;
+            border: 5px solid #d1e7d4;
+            border-radius: 10px;
+            overflow: hidden;
         }
     </style>
-</head>
-<body>
 
+    <!-- HEADER -->
     <header>
-        <a href="index.html"><img src="https://picsum.photos/50/50" alt="Logo" class="logo"></a>
-        <nav>
-            <input type="search" placeholder="Хайх...">
-            <button>🔍</button>
-            <a href="login.html"><button>Log In</button></a>
-            <a href="signup.html"><button>Sign Up</button></a>
-        </nav>
-    </header>
+        <div>
+            <a href="redesign/pages/index.html">
+                <img class="logo" src="redesign/pictures/site elements/logo2.png" alt="logo">
+            </a>
+        </div>
 
+        <div class="search-bar-wrapper">
+            <input type="text" placeholder="Бүтээгдэхүүн хайх">
+            <button>🔍</button>
+        </div>
+
+        <div class="category-wrapper">
+            <a class="main-text" href="#">Цахилгаан бараа</a>
+            <a class="main-text" href="#">Хувцас</a>
+            <a class="main-text" href="#">Хүүхэд</a>
+            <a class="main-text" href="#">Гоёлын чимэглэл</a>
+            <a class="main-text" href="#">Гоо сайхан</a>
+            <a class="main-text" href="#">Бусад</a>
+        </div>
+
+        <div>
+            <a class="basket" href="./login.html">
+                <svg class="hover-darken" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 10L18.5145 17.4276C18.3312 18.3439..." stroke="#000000" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="counter">20</p>
+            </a>
+            <a class="hover-darken header-button button-text" href="./login.html">Log in</a>
+            <a class="hover-darken header-button button-text" href="./signup.html">Sign up</a>
+        </div>
+    </header>
+    
     <main>
-        <section class="shop-info">
-            <figure>
-                <img src="https://picsum.photos/100/100" alt="Дэлгүүрийн зураг">
-            </figure>
-            <article>
-                <h1>Дэлгүүрийн нэр</h1>
-                <p class="rating">⭐⭐⭐⭐☆ (4.5)</p>
-                <p>Дэлгүүрийн тухай тайлбар энд байна...</p>
-            </article>
+        <section class="hero-banner">
+            <h1>Манай дэлгүүрт тавтай морил!</h1>
+            <p>Та бүх төрлийн өндөр үнэлгээтэй, шинээр нэмэгдсэн бүтээгдэхүүнүүдийг эндээс олох боломжтой.</p>
         </section>
 
         <section class="featured-products">
-            <h2>Онцлох бараанууд</h2>
-            <ul>
-                <li>
-                    <figure>
-                        <img src="https://picsum.photos/200/100" alt="Бараа 1">
-                        <figcaption>Бараа 1 - 50,000₮</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="https://picsum.photos/200/100" alt="Бараа 2">
-                        <figcaption>Бараа 2 - 30,000₮</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="https://picsum.photos/200/100" alt="Бараа 3">
-                        <figcaption>Бараа 3 - 20,000₮</figcaption>
-                    </figure>
-                </li>
-            </ul>
+            <h2>🌟 Онцлох бүтээгдэхүүнүүд</h2>
+            <div class="product-grid">
+                <article class="product-card">
+                    <img src="redesign/pictures/products/product1.jpg" alt="Чихэвч">
+                    <h3>Чихэвч Bose</h3>
+                    <p class="price">₮15000</p>
+                    <button>Хадгалах</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="redesign/pictures/products/product2.jpg" alt="Улаан кет">
+                    <h3>Улаан кет</h3>
+                    <p class="price">₮45000</p>
+                    <button>Хадгалах</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="redesign/pictures/products/product3.jpg" alt="Нарны шил">
+                    <h3>Нарны шил</h3>
+                    <p class="price">₮15000</p>
+                    <button>Хадгалах</button>
+                </article>
+            </div>
         </section>
 
-        <aside>
-            <h2>Барааны эрэмбэ</h2>
-            <label for="sort">Эрэмбэ:</label>
-            <select id="sort">
-                <option>Үнэ өсөх</option>
-                <option>Үнэ буурах</option>
-                <option>Шинэ бараа</option>
-                <option>Олон худалдан авсан</option>
-            </select>
-        </aside>
-
-        <section class="reviews">
-            <h2>Сэтгэгдлүүд</h2>
-            <article>
-                <p><strong>Баярцэцэг:</strong> Маш сайн дэлгүүр байна!</p>
-            </article>
-            <article>
-                <p><strong>Энхболд:</strong> Үйлчилгээ сайн байсан.</p>
-            </article>
-        </section>
-
-        <section class="leave-review">
-            <h2>Сэтгэгдэл үлдээх</h2>
-            <form>
-                <textarea placeholder="Сэтгэгдлээ бичнэ үү..."></textarea>
-                <button type="submit">Илгээх</button>
-            </form>
+        <section class="store-map">
+            <h2>📍 Манай байршлууд</h2>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d265.2808683695647!2d106.92847771537578!3d47.91967945398042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d9693143a161c81%3A0xf1074a216491906d!2sNational%20University%20of%20Mongolia!5e0!3m2!1sen!2smn!4v1742997311296!5m2!1sen!2smn"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </section>
     </main>
-
-    <footer>
-        <p>© 2025 Дэлгүүрийн Веб</p>
-    </footer>
-
 </body>
+
+
 </html>
