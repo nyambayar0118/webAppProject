@@ -9,6 +9,8 @@ webAppProject/
 
 
 assignment_1/
+├── css/
+|   └── ...
 ├── pictures/
 |   ├── products/
 |   |   ├── product1.jpg
@@ -17,3 +19,10 @@ assignment_1/
 |       ├── explosion.ico
 |       ├── logo1.jpg
 |       └── logo2.jpg
+├── index.html
+├── login.html
+├── product.html
+├── saved.html
+├── shop.html
+├── shopsignup.html
+└── signup.html
