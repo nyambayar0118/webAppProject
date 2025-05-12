@@ -1,0 +1,21 @@
+@startuml main
+node "index.html" {
+[head]
+[body]
+}
+
+package "layout-wrapper" {
+[header-component]
+[slot]
+[footer-component]
+}
+
+[body] --> [layout-wrapper]
+[slot] --> [top-rated-products]
+[slot] --> [latest-products]
+[slot] --> [category-component]
+
+[top-rated-products] --> [product-box]
+[latest-products] --> [product-box]
+
+@enduml
