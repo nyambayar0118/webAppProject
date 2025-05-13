@@ -1,15 +1,40 @@
 :root {
+    --main-color-0: hsl(0, 0%, 100%);
     --main-color-1: hsl(33, 67%, 94%);
     --main-color-1-darken: hsl(0, 0%, 80%);
     --main-color-2: hsl(34, 64%, 98%);
     --main-color-3: hsl(136, 26%, 92%);
     --main-color-4: hsl(98, 29%, 63%);
+    
+    --dark-color-0: hsl(0, 0%, 0%);
+    --dark-color-1: hsl(0, 0%, 20%);
+    --dark-color-2: hsl(0, 0%, 30%);
+    --dark-color-3: hsl(0, 0%, 40%);
 
-    /* --text-color-light: hsl(98, 29%, 63%); */
-    --text-color-light: hsl(0, 0%, 100%);
+    --text-color-light: hsl(0, 0%, 0%);
+    --text-color-dark: hsl(0, 0%, 100%);
     --text-color-light-darken: hsl(0, 0%, 80%);
 
+    /* --text-color-light: hsl(0, 0%, 100%);
+    --text-color-light-darken: hsl(0, 0%, 80%); */
+
+
+    --main-background-color: var(--main-color-2);
+    --secondary-background-color: var(--main-color-0);
+    --main-text-color: var(--text-color-light);
+    --main-text-color-hover: var(--text-color-light-darken);
+    --secondary-text-color: ;
+    --secondary-text-color-hover: ;
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-background-color: var(--dark-color-1);
+        --secondary-background-color: var(--dark-color-2);
+        --main-text-color: var(--text-color-dark);
+    }
+}
+
 
 header {
     display: flex;
@@ -133,7 +158,7 @@ header>div {
         background-color: red;
         border-radius: 50%;
         width: 1rem;
-        color: white;
+        color: var(--text-color-light);
         font-weight: 600;
         font-size: 0.8rem;
         top: -20px;
@@ -306,16 +331,17 @@ h2 {
     width: 80%;
     text-align: center;
     border-bottom: 1px solid var(--main-color-4);
+    color: var(--main-text-color)
 }
 
 body[data-theme="light"] {
-    background-color: white;
-    color: black;
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
 }
 
 body[data-theme="dark"] {
-    background-color: black;
-    color: white;
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
 }
 
 body.dark-mode {

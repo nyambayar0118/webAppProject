@@ -59,7 +59,7 @@ export class HeaderComponent extends HTMLElement {
     font-size: 1.1rem;
     text-decoration: none;
     text-align: center;
-    color: var(--text-color-light);
+    color: white;
     transition: color 0.3s;
 }
 

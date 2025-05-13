@@ -22,11 +22,12 @@ export class Category extends HTMLElement {
     height: 200px;
 }
 .category-group div {
-    background-color: var(--main-color-3);
+    background-color: var(--main-color-1);
     border-radius: 75px;
+    border: 0px solid var(--main-color-4);
     width: 80%;
     height: 75%;
-    fill: hsl(0, 0%, 40%);
+    fill: var(--main-color-4);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,6 +50,8 @@ export class Category extends HTMLElement {
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: var(--main-text-color);
+    font-size: 1.2rem;
 }
 
       

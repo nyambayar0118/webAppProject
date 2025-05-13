@@ -57,6 +57,7 @@ export class Product extends HTMLElement {
         aspect-ratio: 5/7;
         border-radius: 12px;
         overflow: hidden;
+        background-color: var(--secondary-background-color);
       }
 
       .product-box > img {
@@ -75,7 +76,7 @@ export class Product extends HTMLElement {
         grid-area: title;
         margin: 0 0.5rem;
         align-self: center;
-        color: black;
+        color: var(--main-text-color);
         font-weight: 600;
       }
 
@@ -85,14 +86,14 @@ export class Product extends HTMLElement {
         margin: 0 0.2rem 0 0;
         align-self: center;
         justify-self: center;
-        color: black;
+        color: var(--main-text-color);
       }
 
       .product-box > .product-desc {
         grid-area: desc;
         overflow: hidden;
         margin: 0 0.5rem;
-        color: grey;
+        color: var(--main-text-color);
         font-size: 0.8rem;
       }
 
@@ -100,7 +101,7 @@ export class Product extends HTMLElement {
         grid-area: price;
         margin: 0.3rem 0 0.3rem 0.5rem;
         font-size: 1.5rem;
-        color: black;
+        color: var(--main-text-color);
         font-weight: 600;
         letter-spacing: 0.05rem;
       }
@@ -112,7 +113,7 @@ export class Product extends HTMLElement {
     height: 100%;
     aspect-ratio: 1;
     grid-area: save;
-    background-color: white;
+    background-color: var(--secondary-background-color);
     border-radius: 50%;
     overflow: hidden;
     border: none;
