@@ -8,6 +8,7 @@ export class LayoutWrapper extends HTMLElement {
     this.shadowRoot.innerHTML = `
         <header-component></header-component>
         <slot></slot>
+        <cart-modal style="display: none;"></cart-modal>
         <footer-component></footer-component>
       `;
   }
