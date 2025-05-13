@@ -72,6 +72,7 @@ export class CartModal extends HTMLElement {
           max-width: 500px;
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
           position: relative;
+          background-color: var(--main-background-color);
         }
 
         .modal h2 {
@@ -96,6 +97,7 @@ export class CartModal extends HTMLElement {
 
         .product-list li {
           padding: 0.5rem 0;
+          color: var(--main-text-color);
           border-bottom: 1px solid #ddd;
         }
       </style>
