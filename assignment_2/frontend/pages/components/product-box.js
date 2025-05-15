@@ -164,6 +164,7 @@ export class Product extends HTMLElement {
 
     heartBtn.addEventListener("click", (e) => {
       e.preventDefault();
+      e.stopPropagation();
       const currentlySaved = Product.isSaved(pdata.id);
       const newSaved = !currentlySaved;
 
