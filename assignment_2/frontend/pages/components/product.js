@@ -11,7 +11,7 @@ fetch('./components/product.json')
         <p class="price">Үнэ: ${product.price}</p>
 
         <div class="size-quantity">
-          <label>Размер: </label>
+          <label> Размер: </label>
           <select>
             ${product.size.map(size => `<option>${size}</option>`).join('')}
           </select>
@@ -32,7 +32,22 @@ fetch('./components/product.json')
             <li>✔️ StorePay - Урьдчилгаагүй, хувааж төлөх</li>
           </ul>
         </div>
+        <div class="store-info" style="margin-top: 40px; padding: 20px; background-color: #f9f5f0; border-radius: 8px;">
+          <h3>Дэлгүүрийн дэлгэрэнгүй мэдээлэл</h3>
+          <p><strong>Нэр:</strong> ${store.name}</p>
+          <p><strong>Хаяг:</strong> ${store.address}</p>
+          <p><strong>Утас:</strong> ${store.phone}</p>
+          <p><strong>И-мэйл:</strong> ${store.email}</p>
+          <p><strong>Ажлын цаг:</strong> ${store.hours}</p>
+        </div>
       </div>
     `;
   })
 
+const store = {
+  name: "Nike",
+  address: "Улаанбаатар хот, Сүхбаатар дүүрэг, 1-р хороо, Энхийн өргөн чөлөө 123",
+  phone: "+976 1234 5678",
+  email: "info@nike.mn",
+  hours: "Даваа-Баасан 09:00 - 19:00"
+};

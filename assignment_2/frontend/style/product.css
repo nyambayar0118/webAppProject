@@ -10,6 +10,7 @@
 .product-image img {
   max-width: 500px;
   width: 100%;
+  border-radius: 8px;
 }
 
 .product-details {
@@ -22,7 +23,7 @@
 }
 
 .price {
-  color: #d62828;
+  color: black;
   font-size: 24px;
   margin-bottom: 20px;
 }
@@ -37,12 +38,13 @@ select, input[type="number"] {
 }
 
 .btn-buy {
-  background-color: #ff4d4f;
+  background-color: #090909;
   color: white;
   padding: 12px 24px;
   border: none;
   font-size: 16px;
   cursor: pointer;
+  border-radius: 8px;
 }
 
 .payment-options {
@@ -50,6 +52,7 @@ select, input[type="number"] {
   background-color: var(--main-bg-color);
   padding: 20px;
   border-radius: 8px;
+  background-color: rgb(216, 195, 168);
 }
 
 .payment-options h3 {
