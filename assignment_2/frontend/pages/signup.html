@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бүртгүүлэх - Felisia Shop</title>
+    <link rel="icon" href="../pictures/site elements/explosion.ico" type="image/x-icon">
+    <style>
+        :root {
+            --main-color-4: hsl(98, 29%, 63%);
+            --main-color-3: hsl(136, 26%, 92%);
+            --text-dark: #222;
+            --text-light: #fff;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background: var(--main-color-3);
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .signup-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--main-color-4);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        input {
+            padding: 0.75rem;
+            border: 2px solid var(--main-color-4);
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 0.75rem;
+            background: var(--main-color-4);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .link {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .link a {
+            color: var(--main-color-4);
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="signup-container">
+        <h1>Бүртгүүлэх</h1>
+        <form>
+            <input type="text" placeholder="Нэр" required>
+            <input type="email" placeholder="Имэйл хаяг" required>
+            <input type="password" placeholder="Нууц үг" required>
+            <button type="submit">Бүртгүүлэх</button>
+        </form>
+        <div class="link">
+            <p>Та бүртгэлтэй юу? <a href="login.html">Нэвтрэх</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
