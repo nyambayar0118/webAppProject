@@ -18,7 +18,7 @@ class ShopRouter extends HTMLElement {
 
   navigate(path) {
     let fullPath = path;
-    // Ensure BASE_PATH is included in the URL
+
     if (!fullPath.startsWith(this.BASE_PATH)) {
       if (!fullPath.startsWith("/")) fullPath = "/" + fullPath;
       fullPath = this.BASE_PATH + fullPath;
@@ -30,7 +30,6 @@ class ShopRouter extends HTMLElement {
   matchRoute(path) {
     for (const route of this.routes) {
       const match = path.match(route.regex);
-      console.log("Trying to match", path, "against", route.regex);
       if (match) {
         const params = {};
         route.paramNames.forEach((name, i) => {
@@ -72,7 +71,6 @@ class ShopRouter extends HTMLElement {
       .map(([k, v]) => `${k}="${v}"`)
       .join(" ");
 
-    // ✅ Fixed: Use relative path since index.html is in /pages/
     import(`../components/${matched.component}.js`)
       .then(() => {
         document.querySelector(

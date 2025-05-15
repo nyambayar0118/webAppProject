@@ -18,7 +18,7 @@ class ProductPage extends HTMLElement {
         </div>
         <div class="product-details">
           <h1>${product.name}</h1>
-          <p class="price">Үнэ: ${product.price}</p>
+          <p class="price">Үнэ: ${product.price}₮</p>
           <div class="size-quantity">
             <label>Размер: </label>
             <select>
