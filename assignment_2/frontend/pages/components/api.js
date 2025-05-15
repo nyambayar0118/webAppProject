@@ -64,3 +64,9 @@ export async function getCartCount() {
   // console.log("Cart count: 0");
   return 0;
 }
+
+export async function fetchProductsDetails() {
+  const response = await fetch("./productDetails.json");
+  if (!response.ok) throw new Error("Failed to fetch all products from URL");
+  return await response.json();
+}
