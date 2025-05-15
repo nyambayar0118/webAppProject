@@ -2,7 +2,7 @@ class ShopRouter extends HTMLElement {
   constructor() {
     super();
     this.routes = [];
-    this.BASE_PATH = "/assignment_2/frontend/pages";
+    this.BASE_PATH = "/webAppProject/assignment_2/frontend/pages";
   }
 
   addRoute(route) {
