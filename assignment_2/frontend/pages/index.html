@@ -3,34 +3,29 @@
 
 
 <head>
-    <link rel="stylesheet" type="text/css" href="../style/global.css ">
+    <link rel="stylesheet" type="text/css" href="../style/global.css">
+    <link rel="stylesheet" type="text/css" href="../style/product.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Bang MN</title>
     <link rel="icon" href="../pictures/site elements/explosion.ico" type="image/x-icon">
+    <base href="/assignment_2/frontend/pages/">
+
 
 </head>
 
 
 <body class="no-margin" data-theme="light">
-    <layout-wrapper>
-        <section class="products">
-            <h2>Өндөр үнэлгээтэй</h2>
-            <top-rated-products></top-rated-products>
-        </section>
+    <shop-router>
+        <shop-routes>
+            <shop-route path="/" component="home-page"></shop-route>
+            <shop-route path="/:productId" component="product-page"></shop-route>
+        </shop-routes>
 
-
-        <section class="products">
-            <h2>Шинээр нэмэгдсэн</h2>
-            <latest-products></latest-products>
-        </section>
-
-        <nav class="products">
-            <h2>Ангилал</h2>
-            <category-component></category-component>
-        </nav>
-    </layout-wrapper>
+        <div id="main-content"></div>
+    </shop-router>
 </body>
+
 
 <script type="module" src="./components/cart-modal.js"></script>
 <script type="module" src="./components/product-box.js"></script>
@@ -38,150 +33,15 @@
 <script type="module" src="./components/latest-products.js"></script>
 <script type="module" src="./components/category-component.js"></script>
 <script type="module" src="./components/header-component.js"></script>
+<script type="module" src="./components/footer-component.js"></script>
 <script type="module" src="./components/layout-wrapper.js"></script>
-
-
-<footer>
-    <nav>
-        <ul>
-            <button>Холбоо барих</button>
-            <button>Гомдол гаргах</button>
-            <button>Борлуулагчаар бүртгүүлэх</button>
-            <button>Санал хүсэлт</button>
-        </ul>
-    </nav>
-</footer>
+<script type="module" src="./router/shop-router.js"></script>
+<script type="module" src="./components/home-page.js"></script>
+<script type="module" src="./components/product-page.js"></script>
 
 </html>
 
-
-<!-- <section class="products">
-            <h2>Бүх бараа</h2>
-            <section class="product-group" style="mask-image: none;">
-                <div class="product-group-all">
-                    <a href="product.html>">
-                        <article class="product-box">
-                            <img alt="new arrival product 1" src="../pictures/products/product1.jpg">
-                            <p class="product-name">Бараа 1</p>
-                            <p class="product-price">15000₮</p>
-                            <button>Хадгалах</button>
-                        </article>
-                    </a>
-
-                    <a href="product.html">
-                        <article class="product-box">
-                            <img alt="new arrival product 2" src="../pictures/products/product2.jpg">
-                            <p class="product-name">Бараа 2</p>
-                            <p class="product-price">15000₮</p>
-                            <button>Хадгалах</button>
-                        </article>
-                    </a>
-
-                    <a href="product.html">
-                        <article class="product-box">
-                            <img alt="new arrival product 3" src="../pictures/products/product3.jpg">
-                            <p class="product-name">Бараа 3</p>
-                            <p class="product-price">15000₮</p>
-                            <button>Хадгалах</button>
-                        </article>
-                    </a>
-
-                    <a href="product.html">
-                        <article class="product-box">
-                            <img alt="new arrival product 4" src="../pictures/products/product4.jpg">
-                            <p class="product-name">Бараа 4</p>
-                            <p class="product-price">15000₮</p>
-                            <button>Хадгалах</button>
-                        </article>
-                    </a>
-
-                    <a href="product.html">
-                        <article class="product-box">
-                            <img alt="new arrival product 5" src="../pictures/products/product5.jpg">
-                            <p class="product-name">Бараа 5</p>
-                            <p class="product-price">15000₮</p>
-                            <button>Хадгалах</button>
-                        </article>
-                    </a>
-
-                    <a href="product.html">
-                        <article class="product-box">
-                            <img alt="new arrival product 6" src="../pictures/products/product6.jpg">
-                            <p class="product-name">Бараа 6</p>
-                            <p class="product-price">15000₮</p>
-                            <button>Хадгалах</button>
-                        </article>
-                    </a>
-
-                    <a href="product.html">
-                        <article class="product-box" id="group2">
-                            <img alt="new arrival product 7" src="../pictures/products/product7.jpg">
-                            <p class="product-name">Бараа 7</p>
-                            <p class="product-price">15000₮</p>
-                            <button>Хадгалах</button>
-                        </article>
-                    </a>
-
-                    <a href="product.html">
-                        <article class="product-box">
-                            <img alt="new arrival product 8" src="../pictures/products/product8.jpg">
-                            <p class="product-name">Бараа 8</p>
-                            <p class="product-price">15000₮</p>
-                            <button>Хадгалах</button>
-                        </article>
-                    </a>
-
-                    <a href="product.html">
-                        <article class="product-box">
-                            <img alt="new arrival product 9" src="../pictures/products/product1.jpg">
-                            <p class="product-name">Бараа 9</p>
-                            <p class="product-price">15000₮</p>
-                            <button>Хадгалах</button>
-                        </article>
-                    </a>
-
-                    <a href="product.html">
-                        <article class="product-box">
-                            <img alt="new arrival product 10" src="../pictures/products/product2.jpg">
-                            <p class="product-name">Бараа 10</p>
-                            <p class="product-price">15000₮</p>
-                            <button>Хадгалах</button>
-                        </article>
-                    </a>
-
-                    <a href="product.html">
-                        <article class="product-box">
-                            <img alt="new arrival product 11" src="../pictures/products/product3.jpg">
-                            <p class="product-name">Бараа 11</p>
-                            <p class="product-price">15000₮</p>
-                            <button>Хадгалах</button>
-                        </article>
-                    </a>
-
-                    <a href="product.html">
-                        <article class="product-box">
-                            <img alt="new arrival product 12" src="../pictures/products/product4.jpg">
-                            <p class="product-name">Бараа 12</p>
-                            <p class="product-price">15000₮</p>
-                            <button>Хадгалах</button>
-                        </article>
-                    </a>
-
-
-                </div>
-            </section>
-            <div class="load">
-                <button>
-                    Цааш харах
-                </button>
-            </div>
-
-
-
-
-
-        </section>
-
+<!--
         <section class="map">
             <h2>Дэлгүүрийн байршлууд</h2>
             <div>
@@ -192,34 +52,3 @@
             </div>
 
         </section> -->
-
-
-<!-- <footer>
-        <nav>
-            <section>
-                <h3>Холбоо барих</h3>
-                <ul>
-                    <li><a href="tel:+976 95573778">Утас: (+976) 95573778</a></li>
-                    <li><a href="mailto: nyambayar2014@gmail.com">И-мэйл: nyambayar2014@gmail.com</a></li>
-                    <li><a href="facebook.com">Facebook</a> </li>
-                </ul>
-            </section>
-
-            <section>
-                <h3>Хаяг</h3>
-                <ul>
-                    <li>Сүхбаатар дүүрэг, 1-р хороо, Улаанбаатар хот, Монгол улс</li>
-                </ul>
-            </section>
-
-            <section>
-                <h3>Тусламж</h3>
-                <ul>
-                    <li><a href="tel:+976 95573778">Холбоо барих</a></li>
-                    <li><a href="mailto: nyambayar2014@gmail.com">Гомдол гаргах</a></li>
-                    <li><a href="shopsignup.html">Борлуулагчаар бүртгүүлэх</li>
-                    <li><a href="mailto: nyambayar2014@gmail.com">Санал хүсэлт</a></li>
-                </ul>
-            </section>
-        </nav>
-    </footer> -->

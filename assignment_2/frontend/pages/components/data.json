@@ -1,103 +1,122 @@
 [
-    {
-      "id": "p0001",
-      "imgSrc": "../pictures/products/product1.jpg",
-      "imgAlt": "new arrival product 1",
-      "name": "Bose MX75830 OnEar чихэвч - Хар",
-      "rating": "4.5",
-      "desc": "Headphone on yellow background",
-      "price": "15000",
-      "type": "electronic"
-    },
-    {
-      "id": "p0002",
-      "imgSrc": "../pictures/products/product2.jpg",
-      "imgAlt": "new arrival product 2",
-      "name": "Nike Air Max 1",
-      "rating": "4.8",
-      "desc": "Noise-cancelling wireless headphones",
-      "price": "32000",
-      "type": "electronic"
-    },
-    {
-      "id": "p0003",
-      "imgSrc": "../pictures/products/product3.jpg",
-      "imgAlt": "new arrival product 3",
-      "name": "RayBan P Black",
-      "rating": "3.9",
-      "desc": "Women's 100% black UV filtering sunglasses",
-      "price": "67000",
-      "type": "wearables"
-    },
-    {
-      "id": "p0004",
-      "imgSrc": "../pictures/products/product4.jpg",
-      "imgAlt": "new arrival product 4",
-      "name": "Women's leather shoe",
-      "rating": "2.4",
-      "desc": "Women's cyan leather shoe, size 38",
-      "price": "57000",
-      "type": "clothing"
-    },
-    {
-      "id": "p0005",
-      "imgSrc": "../pictures/products/product5.jpg",
-      "imgAlt": "new arrival product 5",
-      "name": "Taylor Swift Folklore Vinyl",
-      "rating": "5.0",
-      "desc": "Taylor Swift Folklore Vinyl, Sealed",
-      "price": "100000",
-      "type": "other"
-    },
-    {
-      "id": "p0006",
-      "imgSrc": "../pictures/products/product6.jpg",
-      "imgAlt": "new arrival product 6",
-      "name": "Love me hard and soft vinyl",
-      "rating": "4.8",
-      "desc": "Love me hard and soft Vinyl, Sealed",
-      "price": "76000",
-      "type": "other"
-    },
-    {
-      "id": "p0007",
-      "imgSrc": "../pictures/products/product7.jpg",
-      "imgAlt": "new arrival product 7",
-      "name": "Stanley Green WaterBottle",
-      "rating": "3.0",
-      "desc": "Stanley 1L Standard Green WaterBottle",
-      "price": "20000",
-      "type": "other"
-    },
-    {
-      "id": "p0008",
-      "imgSrc": "../pictures/products/product8.jpg",
-      "imgAlt": "new arrival product 8",
-      "name": "Samsung Galaxy Watch 6",
-      "rating": "4.7",
-      "desc": "Samsung Galaxy Watch 6, Sealed, White Band, Classic",
-      "price": "1200000",
-      "type": "electronic"
-    },
-    {
-      "id": "p0009",
-      "imgSrc": "../pictures/products/product9.jpg",
-      "imgAlt": "new arrival product 9",
-      "name": "One Step 2 Polaroid Camera",
-      "rating": "4.1",
-      "desc": "One Step 2 Polaroid Camera, White, Lens included",
-      "price": "92000",
-      "type": "electronic kid"
-    },
-    {
-      "id": "p0010",
-      "imgSrc": "../pictures/products/product10.jpg",
-      "imgAlt": "new arrival product 10",
-      "name": "Chanel No5 Perfume",
-      "rating": "3.5",
-      "desc": "Chanel No5 Perfume, Eau De Parfum",
-      "price": "69000",
-      "type": "beauty"
-    }
-  ]
-  
+  {
+    "id": "p0001",
+    "imgSrc": "../pictures/products/product1.jpg",
+    "imgAlt": "new arrival product 1",
+    "name": "Bose MX75830 OnEar чихэвч - Хар",
+    "rating": "4.5",
+    "desc": "Headphone on yellow background",
+    "price": "15000",
+    "size": ["S", "M", "L", "XL"],
+    "stock": 20,
+    "type": "electronic"
+  },
+  {
+    "id": "p0002",
+    "imgSrc": "../pictures/products/product2.jpg",
+    "imgAlt": "new arrival product 2",
+    "name": "Nike Air Max 1",
+    "rating": "4.8",
+    "desc": "Nike red sneakers, size 48",
+    "price": "32000",
+    "size": ["48", "50", "52", "54"],
+    "stock": 50,
+    "type": "electronic"
+  },
+  {
+    "id": "p0003",
+    "imgSrc": "../pictures/products/product3.jpg",
+    "imgAlt": "new arrival product 3",
+    "name": "RayBan P Black",
+    "rating": "3.9",
+    "desc": "Women's 100% black UV filtering sunglasses",
+    "price": "67000",
+    "size": ["One Size"],
+    "stock": 30,
+    "type": "wearables"
+  },
+  {
+    "id": "p0004",
+    "imgSrc": "../pictures/products/product4.jpg",
+    "imgAlt": "new arrival product 4",
+    "name": "Women's leather shoe",
+    "rating": "2.4",
+    "desc": "Women's cyan leather shoe, size 38",
+    "price": "57000",
+    "size": ["36", "37", "38", "39", "40"],
+    "stock": 25,
+    "type": "clothing"
+  },
+  {
+    "id": "p0005",
+    "imgSrc": "../pictures/products/product5.jpg",
+    "imgAlt": "new arrival product 5",
+    "name": "Taylor Swift Folklore Vinyl",
+    "rating": "5.0",
+    "desc": "Taylor Swift Folklore Vinyl, Sealed",
+    "price": "100000",
+    "size": ["Standard"],
+    "stock": 40,
+    "type": "other"
+  },
+  {
+    "id": "p0006",
+    "imgSrc": "../pictures/products/product6.jpg",
+    "imgAlt": "new arrival product 6",
+    "name": "Love me hard and soft vinyl",
+    "rating": "4.8",
+    "desc": "Love me hard and soft Vinyl, Sealed",
+    "price": "76000",
+    "size": ["Standard"],
+    "stock": 35,
+    "type": "other"
+  },
+  {
+    "id": "p0007",
+    "imgSrc": "../pictures/products/product7.jpg",
+    "imgAlt": "new arrival product 7",
+    "name": "Stanley Green WaterBottle",
+    "rating": "3.0",
+    "desc": "Stanley 1L Standard Green WaterBottle",
+    "price": "20000",
+    "size": ["1L", "750ml"],
+    "stock": 60,
+    "type": "other"
+  },
+  {
+    "id": "p0008",
+    "imgSrc": "../pictures/products/product8.jpg",
+    "imgAlt": "new arrival product 8",
+    "name": "Samsung Galaxy Watch 6",
+    "rating": "4.7",
+    "desc": "Samsung Galaxy Watch 6, Sealed, White Band, Classic",
+    "price": "1200000",
+    "size": ["40mm", "44mm"],
+    "stock": 15,
+    "type": "electronic"
+  },
+  {
+    "id": "p0009",
+    "imgSrc": "../pictures/products/product9.jpg",
+    "imgAlt": "new arrival product 9",
+    "name": "One Step 2 Polaroid Camera",
+    "rating": "4.1",
+    "desc": "One Step 2 Polaroid Camera, White, Lens included",
+    "price": "92000",
+    "size": ["Standard"],
+    "stock": 18,
+    "type": "electronic kid"
+  },
+  {
+    "id": "p0010",
+    "imgSrc": "../pictures/products/product10.jpg",
+    "imgAlt": "new arrival product 10",
+    "name": "Chanel No5 Perfume",
+    "rating": "3.5",
+    "desc": "Chanel No5 Perfume, Eau De Parfum",
+    "price": "69000",
+    "size": ["50ml", "100ml"],
+    "stock": 22,
+    "type": "beauty"
+  }
+]

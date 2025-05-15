@@ -1,7 +1,10 @@
-{
+
+  {
+  "id": "p0002",
   "name": "Nike air max 1",
   "price": "379,900 ₮",
   "imageSrc": "../pictures/products/product2.jpg",
   "size": ["48", "50", "52", "54"],
   "stock": 50
-}
+  }
+

@@ -145,7 +145,7 @@ export class Product extends HTMLElement {
     width: auto;
         }
 </style>
-      <a class="no-underline size-limit" href="${pdata.id}">
+      <div class="no-underline size-limit" role="link" tabindex="0">
                     <article class="product-box float-on-hover">
                         <img alt="${pdata.imgAlt}" src="${pdata.imgSrc}">
                         <p class="product-name">${pdata.name}</p>
@@ -156,7 +156,7 @@ export class Product extends HTMLElement {
                             <img id="heart-img" src="${heartIcon}" alt="heart icon">
                         </button>
                     </article>
-                </a>
+                </div>
       `;
 
     const heartBtn = this.shadowRoot.getElementById("heart-btn");
@@ -171,6 +171,15 @@ export class Product extends HTMLElement {
       heartImg.src = newSaved
         ? "../pictures/site elements/button_heart_filled.png"
         : "../pictures/site elements/button_heart_empty.png";
+    });
+    const linkWrapper = this.shadowRoot.querySelector(".no-underline");
+    linkWrapper.addEventListener("click", () => {
+      const router = document.querySelector("shop-router");
+      if (router) {
+        router.navigate(`/${pdata.id}`);
+      } else {
+        window.location.href = `/${pdata.id}`;
+      }
     });
   }
 
