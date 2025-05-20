@@ -57,3 +57,36 @@ assignment_2/               -->
     |       └── logo2.jpg                   --> Веб хуудасны лого №2
     └── style/                      --> Бүх хуудсуудын CSS
         └── global.css              --> global.css
+
+
+
+
+
+
+Implemented services(database functions written in ./backend/database/functions.txt):
+
+// Fetch functions
+getProductsByShopId
+getProductById
+getShopById
+
+// Verification functions
+checkUserName
+checkUserPassword
+
+// Main insert functions
+insertUser
+insertShop
+insertProduct
+insertComment
+
+// Sub insert functions
+insertProductComment
+insertShopComment
+insertLogin
+insertAddress
+insertTimeTable
+insertSocial
+insertPhoneNo
+insertImg
+insertProductImg

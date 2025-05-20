@@ -1,0 +1,121 @@
+/* Fetch functions */
+create or replace function getProductsByShopId(
+  s_id bigint
+)
+returns table(product_ids bigint) as $$
+begin
+ return query
+  select id from product
+  where shop_id = s_id;
+end;
+$$ language plpgsql;
+
+create or replace function getProductById(
+  p_id bigint
+)
+return table(name varchar, price bigint, created timestamp, rating float, category varchar, size varchar[], stock bigint, description varchar, shop_id bigint) as $$
+begin
+ returns query
+   select name, price, rating, category_id as category, size, stock, description, shop_id from product
+   where id = p_id;
+end;
+$$ language plpgsql;
+
+create or replace function getShopById
+
+/* Verification functions */
+create function checkUserName(input_hash varchar)
+returns boolean as $$
+begin
+ return exists(select 1 from login where username = input_hash);
+end;
+$$ language plpgsql;
+
+create or replace function checkUserPassword(input_hash varchar)
+returns boolean as $$
+begin
+ return exists(select 1 from login where password = input_hash);
+end;
+$$ language plpgsql;
+
+/* Main insert functions */
+create or replace function insertUser
+
+create or replace function insertShop
+
+create or replace function insertProduct
+
+create or replace function insertComment
+
+/* Sub insert functions */
+create or replace function insertProductComment(product_id_value bigint, comment_id_value bigint)
+returns void as $$
+begin
+ insert into product_comment(product_id, comment_id)
+ values (product_id_value, comment_id_value);
+end;
+$$ language plpgsql;
+
+create or replace function insertShopComment(shop_id_value bigint, comment_id_value bigint)
+returns void as $$
+begin
+ insert into shop_comment(shop_id, comment_id)
+ values (shop_id_value, comment_id_value);
+end;
+$$ language plpgsql;
+
+create or replace function insertLogin(profile_value varchar, email_value varchar, username_value varchar, password_value varchar)
+returns void as $$
+begin
+ insert into login(profile, email, username, password)
+ values (profile_value, email_value, username_value, password_value);
+end;
+$$ language plpgsql;
+
+create or replace function insertAddress(city_id_value bigint, district_id_value bigint, khoroo_value bigint, detail_value varchar)
+returns void as $$
+begin
+ insert into address(city_id, district_id, khoroo, detail)
+ values (city_id_value, district_id_value, khoroo_value, detail_value);
+end;
+$$ language plpgsql;
+
+create or replace function insertTimeTable(shop_id_value bigint, day_value WeekDays, opening_value time, closing_value time)
+returns void as $$
+begin
+ insert into timetable(shop_id, day, opening, closing)
+ values (shop_id_value, day_value, opening_value, closing_value);
+end;
+$$ language plpgsql;
+
+create or replace function insertSocial(shop_id_value bigint, link_value varchar, type_id_value bigint)
+return void as $$
+begin
+ insert into social(shop_id, link, type_id)
+ values (shop_id_value, link_value, type_id_value);
+end;
+$$ language plpgsql;
+
+create or replace function insertPhoneNo(shop_id_value bigint, number_value varchar)
+returns void as $$
+begin
+ insert into phone_no(shop_id, number)
+ values (shop_id_value, number_value);
+end;
+$$ language plpgsql;
+
+create or replace function insertImg(imgAlt_value varchar, imgSrc_value varchar)
+returns void as $$
+begin
+ insert into img(imgAlt, imgSrc)
+ values (imgAlt_val, imgSrc_value);
+end;
+$$ language plpgsql;
+
+create or replace function insertProductImg(img_id_value bigint, product_id_value bigint)
+returns void as $$
+begin
+ insert into product_img(product_id, img_id)
+ values (img_id_value, product_id_value);
+end;
+$$ language plpgsql;
