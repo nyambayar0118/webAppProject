@@ -10,6 +10,11 @@ class ProductPage extends HTMLElement {
       return;
     }
 
+    const detailRes = await fetch('./components/productDetails.json');
+    const detailList = await detailRes.json();
+    const detail = detailList.find(item => item.id === product.id);
+    const description = detail ? detail.description : "Тайлбар олдсонгүй.";
+
     this.innerHTML = `
       <layout-wrapper>
         <div class="product-container" id="product-detail">
@@ -20,7 +25,7 @@ class ProductPage extends HTMLElement {
           <h1>${product.name}</h1>
           <p class="price">Үнэ: ${product.price}₮</p>
           <div class="size-quantity">
-            <label>Размер: </label>
+            <label>Size: </label>
             <select>
               ${product.size.map((size) => `<option>${size}</option>`).join("")}
             </select>
@@ -29,7 +34,7 @@ class ProductPage extends HTMLElement {
             <label>Тоо ширхэг: </label>
             <input type="number" min="1" max="${product.stock}" value="1">
           </div>
-          <button class="btn-buy">Худалдаж авах</button>
+          <button class="btn-buy">Хадгалах</button>
           <div class="payment-options">
             <h3>Ваучер/Лизингийн сонголтууд:</h3>
             <ul>
@@ -38,8 +43,10 @@ class ProductPage extends HTMLElement {
               <li>✔️ StorePay - Урьдчилгаагүй, хувааж төлөх</li>
             </ul>
           </div>
-        </div>
-      </div>
+          <div class="store-info" style="margin-top: 40px; padding: 20px; background-color: rgb(216, 195, 168); border-radius: 8px;">
+              <h3>Барааны дэлгэрэнгүй мэдээлэл</h3>
+              <p>${description}</p>
+            </div>
       </layout-wrapper>
     `;
   }
