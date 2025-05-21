@@ -1,19 +1,35 @@
-import { getProductById } from "./api.js";
-
 class ProductPage extends HTMLElement {
   async connectedCallback() {
     const productId = this.getAttribute("productId");
-    const product = await getProductById(productId);
-
-    if (!product) {
-      this.innerHTML = `<p>Product not found.</p>`;
+    if (!productId) {
+      this.innerHTML = `<p>Product ID not specified.</p>`;
       return;
     }
 
-    const detailRes = await fetch('./components/productDetails.json');
-    const detailList = await detailRes.json();
-    const detail = detailList.find(item => item.id === product.id);
-    const description = detail ? detail.description : "Тайлбар олдсонгүй.";
+    // Remove leading 'p' or 'P' if present
+    const numericId = productId.replace(/^p/i, '');
+
+    let product;
+    try {
+      const res = await fetch(`/api/products/${numericId}`);
+      if (!res.ok) {
+        this.innerHTML = `<p>Product not found.</p>`;
+        return;
+      }
+      product = await res.json();
+    } catch (err) {
+      this.innerHTML = `<p>Error loading product.</p>`;
+      return;
+    }
+
+    // Optionally fetch details if you have a separate details API or file
+    let description = "Тайлбар олдсонгүй.";
+    try {
+      const detailRes = await fetch('./components/productDetails.json');
+      const detailList = await detailRes.json();
+      const detail = detailList.find(item => item.id == productId);
+      if (detail) description = detail.description;
+    } catch {}
 
     this.innerHTML = `
       <layout-wrapper>
@@ -27,12 +43,12 @@ class ProductPage extends HTMLElement {
           <div class="size-quantity">
             <label>Size: </label>
             <select>
-              ${product.size.map((size) => `<option>${size}</option>`).join("")}
+              ${(product.size || []).map((size) => `<option>${size}</option>`).join("")}
             </select>
           </div>
           <div class="size-quantity">
             <label>Тоо ширхэг: </label>
-            <input type="number" min="1" max="${product.stock}" value="1">
+            <input type="number" min="1" max="${product.stock || 1}" value="1">
           </div>
           <button class="btn-buy">Хадгалах</button>
           <div class="payment-options">
