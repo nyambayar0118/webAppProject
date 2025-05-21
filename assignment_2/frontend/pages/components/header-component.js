@@ -14,6 +14,8 @@ export class HeaderComponent extends HTMLElement {
   }
 
   async connectedCallback() {
+    const isSticky = this.getAttribute("sticky") === "true";
+    const stickyStyle = isSticky ? `position: sticky; top: 0; z-index: 100;` : "";
     try {
       const cartCount = await getCartCount();
 
@@ -139,9 +141,8 @@ header>div {
     align-items: center;
     justify-content: space-between;
 }
-
       </style>
-          <header>
+      <header style="${stickyStyle}">
         <div>
             <a href="index.html">
                 <img class="logo" src="../pictures/site elements/logo2.png" alt="logo">
