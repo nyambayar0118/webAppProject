@@ -1,4 +1,4 @@
-import sql from "../database/database";
+import sql from "../database/database.js";
 import crypto from "crypto";
 
 function sha256(value) {

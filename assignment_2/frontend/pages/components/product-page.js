@@ -11,25 +11,23 @@ class ProductPage extends HTMLElement {
 
     let product;
     try {
-      const res = await fetch(`/api/products/${numericId}`);
+      const res = await fetch(`http://localhost:3000/api/products/${numericId}`);
+
       if (!res.ok) {
         this.innerHTML = `<p>Product not found.</p>`;
         return;
       }
-      product = await res.json();
+      let products = await res.json();
+      product = products[0];
     } catch (err) {
       this.innerHTML = `<p>Error loading product.</p>`;
       return;
     }
 
-    // Optionally fetch details if you have a separate details API or file
-    let description = "Тайлбар олдсонгүй.";
-    try {
-      const detailRes = await fetch('./components/productDetails.json');
-      const detailList = await detailRes.json();
-      const detail = detailList.find(item => item.id == productId);
-      if (detail) description = detail.description;
-    } catch {}
+    if (!product) {
+      this.innerHTML = `<p>Product not found.</p>`;
+      return;
+    }
 
     this.innerHTML = `
       <layout-wrapper>
@@ -61,7 +59,7 @@ class ProductPage extends HTMLElement {
           </div>
           <div class="store-info" style="margin-top: 40px; padding: 20px; background-color: rgb(216, 195, 168); border-radius: 8px;">
               <h3>Барааны дэлгэрэнгүй мэдээлэл</h3>
-              <p>${description}</p>
+              <p>${product.description}</p>
             </div>
       </layout-wrapper>
     `;
