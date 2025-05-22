@@ -4,29 +4,16 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import history from 'connect-history-api-fallback';
 import productRoutes from './routes/product.js';
-<<<<<<< HEAD
 // import loginRoutes from './routes/login.js';
-=======
-import signupRoutes from './routes/signup.js';
-import loginRoutes from './routes/login.js';
->>>>>>> 73e4b46bc10f0715c8fd36e12a730afbb0ca69cb
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-<<<<<<< HEAD
 // Serve static files from the frontend directory
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const frontendPath = path.join(__dirname, '../frontend/pages');
-=======
-// This mounts routes at /api/signup/*
-app.use('/api/signup', signupRoutes);
-
-// This mounts routes at /api/login/*
-app.use('/api/login', loginRoutes);
->>>>>>> 73e4b46bc10f0715c8fd36e12a730afbb0ca69cb
 
 // API routes FIRST!
 app.use('/api', productRoutes);
