@@ -5,14 +5,12 @@ function sha256(value) {
     return crypto.createHash("sha256").update(value).digest("hex");
 }
 
-export async function checkUsername(username) {
-    const hash = sha256(username);
-    const result = await sql`select checkUserName(${hash})`;
-    return result.length > 0 ? true : false;
-}
+export async function checkUserCredentials(email, password) {
+    const emailHash = sha256(email);
+    const passwordHash = sha256(password);
 
-export async function checkPassword(password) {
-    const hash = sha256(password);
-    const result = await sql`select checkUserPassword(${hash})`;
-    return result.length > 0 ? true : false;
+    const result = await sql`
+        SELECT 1 FROM users WHERE email = ${emailHash} AND password = ${passwordHash}
+    `;
+    return result.length > 0;
 }
