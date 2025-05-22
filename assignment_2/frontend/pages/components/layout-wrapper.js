@@ -6,6 +6,8 @@ export class LayoutWrapper extends HTMLElement {
 
   async connectedCallback() {
     this.shadowRoot.innerHTML = `
+    
+    <header-component sticky="true"></header-component>
         <slot></slot>
         <cart-modal style="display: none;"></cart-modal>
         <footer-component></footer-component>

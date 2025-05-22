@@ -6,6 +6,16 @@ export class HeaderComponent extends HTMLElement {
     this.attachShadow({ mode: "open" });
   }
 
+  static get observedAttributes() {
+    return ["sticky"];
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (name === "sticky" && oldValue !== newValue) {
+      this.render();
+    }
+  }
+
   updateCartCount(newCount) {
     const counterElement = this.shadowRoot.querySelector(".counter");
     if (counterElement) {
@@ -14,6 +24,10 @@ export class HeaderComponent extends HTMLElement {
   }
 
   async connectedCallback() {
+    await this.render();
+  }
+
+  async render() {
     const isSticky = this.getAttribute("sticky") === "true";
     const stickyStyle = isSticky ? `position: sticky; top: 0; z-index: 100;` : "";
     try {
@@ -141,11 +155,50 @@ header>div {
     align-items: center;
     justify-content: space-between;
 }
+
+/* Hide category list on small screens */
+@media (max-width: 1000px), (max-width: 1024px) and (orientation: landscape) {
+  .category-wrapper {
+    display: none !important;
+  }
+  header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  header > div {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .search-bar-wrapper {
+    width: 100%;
+    height: 2rem;
+    margin: 0.5rem 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+    display: flex;
+    align-items: center; 
+  }
+  .search-bar-wrapper input {
+    flex: 1 1 0;
+    min-width: 0;
+    box-sizing: border-box;
+    width: auto;
+  }
+  .search-bar-wrapper button {
+    flex: 0 0 48px;
+    min-width: 40px;
+    box-sizing: border-box;
+    width: auto; /* Override previous width */
+    height: 100%;
+  }
+}
       </style>
       <header style="${stickyStyle}">
         <div>
             <a href="index.html">
-                <img class="logo" src="../pictures/site elements/logo2.png" alt="logo">
+                <img class="logo" src="../pictures/site elements/logo2.webp" alt="logo">
             </a>
         </div>
 
@@ -224,7 +277,7 @@ header>div {
         const newCartCount = await getCartCount();
         this.updateCartCount(newCartCount);
       });
-    } catch (err) {
+    } catch (error) {
       console.error("Error in HeaderComponent:", error);
     }
   }

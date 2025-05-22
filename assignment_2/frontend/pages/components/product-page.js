@@ -33,7 +33,7 @@ class ProductPage extends HTMLElement {
       <layout-wrapper>
         <div class="product-container" id="product-detail">
         <div class="product-image">
-          <img src="${product.imgSrc}" alt="${product.name}">
+          <img src="${product.imgsrc}" alt="${product.imgalt}">
         </div>
         <div class="product-details">
           <h1>${product.name}</h1>

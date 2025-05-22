@@ -1,7 +1,7 @@
 [
   {
     "id": "p0001",
-    "imgSrc": "../pictures/products/product1.jpg",
+    "imgSrc": "../pictures/products/p0001.webp",
     "imgAlt": "new arrival product 1",
     "name": "Bose MX75830 OnEar чихэвч - Хар",
     "rating": "4.5",
@@ -13,7 +13,7 @@
   },
   {
     "id": "p0002",
-    "imgSrc": "../pictures/products/product2.jpg",
+    "imgSrc": "../pictures/products/p0002.webp",
     "imgAlt": "new arrival product 2",
     "name": "Nike Air Max 1",
     "rating": "4.8",
@@ -25,7 +25,7 @@
   },
   {
     "id": "p0003",
-    "imgSrc": "../pictures/products/product3.jpg",
+    "imgSrc": "../pictures/products/p0003.webp",
     "imgAlt": "new arrival product 3",
     "name": "RayBan P Black",
     "rating": "3.9",
@@ -37,7 +37,7 @@
   },
   {
     "id": "p0004",
-    "imgSrc": "../pictures/products/product4.jpg",
+    "imgSrc": "../pictures/products/p0004.webp",
     "imgAlt": "new arrival product 4",
     "name": "Women's leather shoe",
     "rating": "2.4",
@@ -49,7 +49,7 @@
   },
   {
     "id": "p0005",
-    "imgSrc": "../pictures/products/product5.jpg",
+    "imgSrc": "../pictures/products/p0005.webp",
     "imgAlt": "new arrival product 5",
     "name": "Taylor Swift Folklore Vinyl",
     "rating": "5.0",
@@ -61,7 +61,7 @@
   },
   {
     "id": "p0006",
-    "imgSrc": "../pictures/products/product6.jpg",
+    "imgSrc": "../pictures/products/p0006.webp",
     "imgAlt": "new arrival product 6",
     "name": "Love me hard and soft vinyl",
     "rating": "4.8",
@@ -73,7 +73,7 @@
   },
   {
     "id": "p0007",
-    "imgSrc": "../pictures/products/product7.jpg",
+    "imgSrc": "../pictures/products/p0007.webp",
     "imgAlt": "new arrival product 7",
     "name": "Stanley Green WaterBottle",
     "rating": "3.0",
@@ -85,7 +85,7 @@
   },
   {
     "id": "p0008",
-    "imgSrc": "../pictures/products/product8.jpg",
+    "imgSrc": "../pictures/products/p0008.webp",
     "imgAlt": "new arrival product 8",
     "name": "Samsung Galaxy Watch 6",
     "rating": "4.7",
@@ -97,7 +97,7 @@
   },
   {
     "id": "p0009",
-    "imgSrc": "../pictures/products/product9.jpg",
+    "imgSrc": "../pictures/products/p0009.webp",
     "imgAlt": "new arrival product 9",
     "name": "One Step 2 Polaroid Camera",
     "rating": "4.1",
@@ -109,7 +109,7 @@
   },
   {
     "id": "p0010",
-    "imgSrc": "../pictures/products/product10.jpg",
+    "imgSrc": "../pictures/products/p0010.webp",
     "imgAlt": "new arrival product 10",
     "name": "Chanel No5 Perfume",
     "rating": "3.5",

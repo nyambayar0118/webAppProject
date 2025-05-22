@@ -22,8 +22,8 @@ export class Product extends HTMLElement {
     const heartImg = this.shadowRoot.getElementById("heart-img");
     if (heartImg) {
       heartImg.src = e.detail.shouldSave
-        ? "../pictures/site elements/button_heart_filled.png"
-        : "../pictures/site elements/button_heart_empty.png";
+        ? "../pictures/site elements/button_heart_filled.webp"
+        : "../pictures/site elements/button_heart_empty.webp";
     }
   };
 
@@ -35,8 +35,8 @@ export class Product extends HTMLElement {
   render(pdata) {
     const isSaved = Product.isSaved(pdata.id);
     const heartIcon = isSaved
-      ? "../pictures/site elements/button_heart_filled.png"
-      : "../pictures/site elements/button_heart_empty.png";
+      ? "../pictures/site elements/button_heart_filled.webp"
+      : "../pictures/site elements/button_heart_empty.webp";
 
     this.shadowRoot.innerHTML = `
     <style>
@@ -65,6 +65,8 @@ export class Product extends HTMLElement {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        display: block;
+        max-height: 250px;
         border-radius: 12px;
       }
 
@@ -170,8 +172,8 @@ export class Product extends HTMLElement {
 
       Product.setSaved(pdata.id, newSaved);
       heartImg.src = newSaved
-        ? "../pictures/site elements/button_heart_filled.png"
-        : "../pictures/site elements/button_heart_empty.png";
+        ? "../pictures/site elements/button_heart_filled.webp"
+        : "../pictures/site elements/button_heart_empty.webp";
     });
     const linkWrapper = this.shadowRoot.querySelector(".no-underline");
     linkWrapper.addEventListener("click", () => {

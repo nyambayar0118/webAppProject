@@ -22,15 +22,35 @@ class LatestProducts extends HTMLElement {
 
       this.shadowRoot.innerHTML = `
         <style>
-          .product-group-latest {
-            display: grid;
-            place-items: center;
-            grid-template-columns: repeat(6, minmax(200px, 1fr));
-            gap: 3rem;
-            max-width: 90%;
-            margin: 0 auto;
-          }
-        </style>
+    .product-group-latest {
+      display: grid;
+      place-items: center;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.5rem 2rem;
+      box-sizing: border-box;
+    }
+    @media (max-width: 1200px) {
+      .product-group-latest {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width: 900px) {
+      .product-group-latest {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .product-group-latest {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0.7rem 0.5rem;
+      }
+    }
+  </style>
       `;
       this.shadowRoot.appendChild(container);
 
