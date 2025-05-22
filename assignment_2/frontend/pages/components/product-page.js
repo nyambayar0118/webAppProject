@@ -11,7 +11,7 @@ class ProductPage extends HTMLElement {
 
     let product;
     try {
-      const res = await fetch(`http://localhost:3000/api/products/${numericId}`);
+      const res = await fetch(`http://webappvm.japaneast.cloudapp.azure.com:3000/api/products/${numericId}`);
 
       if (!res.ok) {
         this.innerHTML = `<p>Product not found.</p>`;
