@@ -19,7 +19,7 @@ router.get('/products/:id', async (req, res) => {
 
     if (!product) return res.status(404).json({ error: "Product not found" });
 
-    res.json(product);
+    res.status(200).json(product);
   } catch (err) {
     console.error("Error fetching product:", err);
     res.status(500).json({ error: "Internal Server Error" });

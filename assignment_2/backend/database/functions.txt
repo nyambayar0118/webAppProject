@@ -13,18 +13,18 @@ $$ language plpgsql;
 create or replace function getProductById(
   p_id bigint
 )
-return table(name varchar, price bigint, created timestamp, rating float, category varchar, size varchar[], stock bigint, description varchar, shop_id bigint) as $$
+returns table(name varchar, price bigint, created timestamp, rating float, category varchar, size varchar[], stock bigint, description varchar, shop_id bigint) as $$
 begin
- returns query
-   select name, price, rating, category_id as category, size, stock, description, shop_id from product
-   where id = p_id;
+ return query
+   select product.name, product.price, product.rating, product.category_id as category, product.size, product.stock, product.description, product.shop_id from product
+   where product.id = p_id;
 end;
 $$ language plpgsql;
 
-create or replace function getShopById
+-- create or replace function getShopById
 
 /* Verification functions */
-create function checkUserName(input_hash varchar)
+create or replace function checkUserName(input_hash varchar)
 returns boolean as $$
 begin
  return exists(select 1 from login where username = input_hash);
@@ -39,13 +39,13 @@ end;
 $$ language plpgsql;
 
 /* Main insert functions */
-create or replace function insertUser
+-- create or replace function insertUser
 
-create or replace function insertShop
+-- create or replace function insertShop
 
-create or replace function insertProduct
+-- create or replace function insertProduct
 
-create or replace function insertComment
+-- create or replace function insertComment
 
 /* Sub insert functions */
 create or replace function insertProductComment(product_id_value bigint, comment_id_value bigint)
@@ -80,7 +80,7 @@ begin
 end;
 $$ language plpgsql;
 
-create or replace function insertTimeTable(shop_id_value bigint, day_value WeekDays, opening_value time, closing_value time)
+create or replace function insertTimeTable(shop_id_value bigint, day_value varchar, opening_value time, closing_value time)
 returns void as $$
 begin
  insert into timetable(shop_id, day, opening, closing)
@@ -89,7 +89,7 @@ end;
 $$ language plpgsql;
 
 create or replace function insertSocial(shop_id_value bigint, link_value varchar, type_id_value bigint)
-return void as $$
+returns void as $$
 begin
  insert into social(shop_id, link, type_id)
  values (shop_id_value, link_value, type_id_value);
