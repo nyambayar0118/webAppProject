@@ -12,7 +12,7 @@ class ShopComponent extends HTMLElement {
         return;
       }
       const data = await res.json();
-      console.log("Shop data received:", data); // Debug log
+      // console.log("Shop data received:", data); // Debug log
       shop = data || {};
       products = data.products || [];
       reviews = data.reviews || [];

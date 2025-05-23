@@ -5,6 +5,8 @@ import { fileURLToPath } from 'url';
 import history from 'connect-history-api-fallback';
 import productRoutes from './routes/product.js';
 import shopRoutes from './routes/shop.js';
+import { sign } from 'crypto';
+import signupRoutes from './routes/signup.js';
 // import loginRoutes from './routes/login.js';
 
 const app = express();
@@ -19,6 +21,7 @@ const frontendPath = path.join(__dirname, '../frontend/pages');
 // API routes FIRST!
 app.use('/api', productRoutes);
 app.use('/api', shopRoutes);
+app.use('/api', signupRoutes);
 // app.use('/api/login', loginRoutes);
 
 // History fallback for SPA (must come AFTER API routes, BEFORE static)

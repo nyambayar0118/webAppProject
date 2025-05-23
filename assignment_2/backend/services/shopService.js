@@ -45,6 +45,6 @@ import sql from "../database/database.js";
 export async function getShopById(shopId) {
     const shop = await sql`select * from getshopbyid(${shopId})`;
     const result = JSON.stringify(shop);
-    console.log(result);
+    // console.log(result);
     return result || null;
 }
